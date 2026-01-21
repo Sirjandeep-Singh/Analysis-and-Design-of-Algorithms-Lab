@@ -17,14 +17,16 @@ public class TimeAlgo {
         for(int i = 0; i < CASES; i++){
             int target = generateRandom(arr, n);
             //2
-            //selectionSortAlgo.oppositeselectionSort(arr, n);
+            selectionSortAlgo.oppositeselectionSort(arr, n);
             //3
-
+            //BubbleSortAlgo.bubbleSortOpposite(arr, n);
             Instant st = Instant.now();
             //1
             //LinearSearch.linearSearch(arr, -1, 0, n);
             //2
-            //selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
+            //3
+            //BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;
@@ -39,12 +41,16 @@ public class TimeAlgo {
         for(int i = 0; i < CASES; i++){
             int target = generateRandom(arr, n);
             //2
-            //selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
+            //3
+            //BubbleSortAlgo.bubbleSort(arr, n);
             Instant st = Instant.now();
             //1
             //LinearSearch.linearSearch(arr, arr[0], 0, n);
             //2
-            //selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
+            //3
+            //BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;
@@ -62,7 +68,9 @@ public class TimeAlgo {
             //1
             //LinearSearch.linearSearch(arr, target, 0, n);
             //2
-            //selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
+            //3
+            //BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;

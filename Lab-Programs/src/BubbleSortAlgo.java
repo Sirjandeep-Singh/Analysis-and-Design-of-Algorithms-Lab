@@ -12,6 +12,18 @@ public class BubbleSortAlgo {
         }
     }
 
+    public static void bubbleSortOpposite(int[] arr, int size){
+        for(int i = 0 ; i < size - 1; i++){
+            for(int j = 0 ; j < size - 1 - i ; j++){
+                if(arr[j + 1] > arr[j]){
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+
     public static void main(String[] args){
         int[] scales = {100,500,1000,2000,5000,10000,15000};
         //Used to test the algorithm
