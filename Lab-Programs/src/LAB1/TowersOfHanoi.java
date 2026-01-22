@@ -1,3 +1,5 @@
+package LAB1;
+
 public class TowersOfHanoi {
     public static void solveHanoi(String source, String dest, String spare, int n){
         if(n == 1){

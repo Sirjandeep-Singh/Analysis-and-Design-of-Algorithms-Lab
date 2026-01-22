@@ -1,3 +1,5 @@
+package LAB1;
+
 public class BubbleSortAlgo {
 
     public static void bubbleSort(int[] arr, int size){
@@ -29,7 +31,7 @@ public class BubbleSortAlgo {
         //Used to test the algorithm
 //        int n = 10;
 //        int[] arr = new int[n];
-//        TimeAlgo.generateRandom(arr, n);
+//        LAB1.TimeAlgo.generateRandom(arr, n);
 //        bubbleSort(arr, n);
 //        for(int x : arr){
 //            System.out.print(x + " ");

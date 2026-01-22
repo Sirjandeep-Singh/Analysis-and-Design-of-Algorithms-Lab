@@ -1,3 +1,5 @@
+package LAB1;
+
 public class power {
     public static int calculatePowerFast(int a, int b){
         if(b == 1) return a;

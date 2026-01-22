@@ -1,3 +1,5 @@
+package LAB1;
+
 public class BallTips {
     public static int calculateTips(double velocity, double loss, int tips){
         if(velocity < 1) return tips;

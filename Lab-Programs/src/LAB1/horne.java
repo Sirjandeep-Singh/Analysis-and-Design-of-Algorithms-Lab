@@ -1,3 +1,5 @@
+package LAB1;
+
 public class horne {
     public static int solveHorne(int[] arr, int idx, int m, int x){
         if(idx == m + 1) return 0;

@@ -1,3 +1,5 @@
+package LAB1;
+
 public class LinearSearch {
 
     public static boolean linearSearch(int[] arr, int target, int idx, int size){

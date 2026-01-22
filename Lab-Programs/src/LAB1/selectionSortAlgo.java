@@ -1,3 +1,5 @@
+package LAB1;
+
 public class selectionSortAlgo {
     public static void selectionSort(int[] arr, int size){
         for(int i = 0 ; i < size - 1 ; i ++){
@@ -30,7 +32,7 @@ public class selectionSortAlgo {
     public static void main(String[] args){
         int[] scales = {100,500,1000,2000,5000,10000,15000};
 //        Used to test the algorithm
-//        TimeAlgo.generateRandom(arr, n);
+//        LAB1.TimeAlgo.generateRandom(arr, n);
 //        selectionSort(arr, n);
 //        for(int x : arr){
 //            System.out.print(x + " ");

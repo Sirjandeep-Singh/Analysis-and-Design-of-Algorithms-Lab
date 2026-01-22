@@ -1,5 +1,4 @@
-import java.sql.Time;
-import java.util.*;
+package LAB1;
 
 public class EarlyDupe {
     private static int earliestDuplicate(int[] arr, int limit){

@@ -1,3 +1,5 @@
+package LAB1;
+
 import java.util.concurrent.ThreadLocalRandom;
 import java.time.Instant;
 public class TimeAlgo {
@@ -19,14 +21,14 @@ public class TimeAlgo {
             //2
             selectionSortAlgo.oppositeselectionSort(arr, n);
             //3
-            //BubbleSortAlgo.bubbleSortOpposite(arr, n);
+            //LAB1.BubbleSortAlgo.bubbleSortOpposite(arr, n);
             Instant st = Instant.now();
             //1
-            //LinearSearch.linearSearch(arr, -1, 0, n);
+            //LAB1.LinearSearch.linearSearch(arr, -1, 0, n);
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
-            //BubbleSortAlgo.bubbleSort(arr, n);
+            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;
@@ -43,14 +45,14 @@ public class TimeAlgo {
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
-            //BubbleSortAlgo.bubbleSort(arr, n);
+            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             Instant st = Instant.now();
             //1
-            //LinearSearch.linearSearch(arr, arr[0], 0, n);
+            //LAB1.LinearSearch.linearSearch(arr, arr[0], 0, n);
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
-            //BubbleSortAlgo.bubbleSort(arr, n);
+            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;
@@ -66,11 +68,11 @@ public class TimeAlgo {
             int target = generateRandom(arr, n);
             Instant st = Instant.now();
             //1
-            //LinearSearch.linearSearch(arr, target, 0, n);
+            //LAB1.LinearSearch.linearSearch(arr, target, 0, n);
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
-            //BubbleSortAlgo.bubbleSort(arr, n);
+            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             Instant end = Instant.now();
             long duration = java.time.Duration.between(st,end).toNanos();
             totalTimeTaken += duration;
