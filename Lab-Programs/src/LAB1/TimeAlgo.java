@@ -22,15 +22,18 @@ public class TimeAlgo {
             selectionSortAlgo.oppositeselectionSort(arr, n);
             //3
             //LAB1.BubbleSortAlgo.bubbleSortOpposite(arr, n);
-            Instant st = Instant.now();
+            //Instant st = Instant.now();
+            long st = System.nanoTime();
             //1
             //LAB1.LinearSearch.linearSearch(arr, -1, 0, n);
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
             //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
-            Instant end = Instant.now();
-            long duration = java.time.Duration.between(st,end).toNanos();
+            //Instant end = Instant.now();
+            long end = System.nanoTime();
+            //long duration = java.time.Duration.between(st,end).toNanos();
+            long duration = end - st;
             totalTimeTaken += duration;
         }
         return totalTimeTaken/1000 ;

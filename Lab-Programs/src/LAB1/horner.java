@@ -1,6 +1,6 @@
 package LAB1;
 
-public class horne {
+public class horner {
     public static int solveHorne(int[] arr, int idx, int m, int x){
         if(idx == m + 1) return 0;
         return arr[idx] + x * solveHorne(arr, idx + 1, m, x);
