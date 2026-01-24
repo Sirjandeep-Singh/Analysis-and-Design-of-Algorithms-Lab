@@ -1,377 +1,313 @@
-###Algorithms Design and Analysis — Lab Programs
+# Algorithms Design and Analysis — Lab Programs
 
-This repository contains Java implementations of fundamental algorithms along with detailed documentation including aim, pseudocode, variables used, logical working, and complexity analysis.
+This repository contains Java implementations of fundamental algorithms with proper documentation including aim, pseudocode, variables used, logic, time complexity, and space complexity.
 
-1. Ball Tips Problem (BallTips.java)
-Aim
+---
 
+## Program 1: Ball Tips Problem (BallTips.java)
+
+### Aim
 To calculate the number of times a ball will bounce until its velocity drops below a minimum threshold using a recursive approach while considering resistance losses.
 
-Algorithm / Pseudocode
+### Algorithm / Pseudocode
+1. Input initial velocity and minimum velocity threshold  
+2. If current velocity is less than threshold  
+   - Return count  
+3. Reduce velocity based on resistance factor  
+4. Increment bounce count  
+5. Recursively call function with updated velocity  
+6. Return total count  
 
-Input initial velocity and minimum velocity threshold
+### Variables Used
+- **velocity** — Current velocity of the ball  
+- **threshold** — Minimum velocity limit  
+- **resistance** — Reduction factor after each bounce  
+- **count** — Stores number of bounces  
 
-If current velocity is less than threshold
-Return count
-
-Reduce velocity based on resistance factor
-
-Increment bounce count
-
-Recursively call the function with updated velocity
-
-Return total count
-
-Variables Used
-Variable	Description
-velocity	Current velocity of the ball
-threshold	Minimum velocity limit
-resistance	Reduction factor applied after each bounce
-count	Stores number of bounces
-Logic / Working
-
-The program uses recursion to simulate ball bounces.
-After every bounce, the velocity is reduced based on resistance.
-If the velocity becomes smaller than the minimum threshold, recursion stops.
+### Logic / Working
+The program uses recursion to simulate ball bounces.  
+After every bounce, the velocity is reduced based on resistance.  
+If the velocity becomes smaller than the threshold, recursion stops.  
 The total number of recursive calls gives the number of ball tips.
 
-Time Complexity
+### Time Complexity
+- **O(n)** — where n is the number of bounces.
 
-O(n) — where n is the number of bounces until the velocity drops below the threshold.
+### Space Complexity
+- **O(n)** — due to recursive call stack.
 
-Space Complexity
+---
 
-O(n) — due to recursive call stack usage.
+## Program 2: Bubble Sort (BubbleSortAlgo.java)
 
-2. Bubble Sort (BubbleSortAlgo.java)
-Aim
+### Aim
+To sort an array of integers using the Bubble Sort algorithm.
 
-To sort an array of integers using the Bubble Sort algorithm and analyze its performance.
+### Algorithm / Pseudocode
+1. Read array size and elements  
+2. Repeat passes over the array  
+3. Compare adjacent elements  
+4. If left element is greater than right element  
+   - Swap them  
+5. Continue until array is sorted  
 
-Algorithm / Pseudocode
+### Variables Used
+- **arr[]** — Stores array elements  
+- **n** — Size of array  
+- **i, j** — Loop counters  
+- **temp** — Temporary variable for swapping  
 
-Read array size and elements
+### Logic / Working
+Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.  
+After each pass, the largest element moves to the end of the array.  
+This process continues until the array becomes sorted.
 
-Repeat passes from first index to last
+### Time Complexity
+- Best Case: **O(n)**  
+- Average Case: **O(n²)**  
+- Worst Case: **O(n²)**  
 
-Compare adjacent elements
+### Space Complexity
+- **O(1)** — in-place sorting.
 
-If left element is greater than right element
-Swap them
+---
 
-Continue until array is sorted
+## Program 3: Early Duplicate Detection (EarlyDupe.java)
 
-Variables Used
-Variable	Description
-arr[]	Stores input array elements
-n	Size of the array
-i, j	Loop counters
-temp	Temporary variable used for swapping
-Logic / Working
+### Aim
+To detect duplicate elements in an array using early termination.
 
-Bubble Sort repeatedly compares adjacent elements and swaps them if they are in the wrong order.
-After each pass, the largest element moves to the end of the array.
-This continues until the entire array becomes sorted.
+### Algorithm / Pseudocode
+1. Read array elements  
+2. Compare each element with remaining elements  
+3. If duplicate found  
+   - Print message  
+   - Terminate execution  
+4. If no duplicate found  
+   - Print unique elements message  
 
-Time Complexity
+### Variables Used
+- **arr[]** — Input array  
+- **i, j** — Loop counters  
+- **flag** — Duplicate detection indicator  
 
-Best Case: O(n)
+### Logic / Working
+The algorithm compares elements pairwise.  
+When a duplicate is detected, execution stops immediately.  
+This avoids unnecessary comparisons and improves efficiency.
 
-Average Case: O(n²)
+### Time Complexity
+- Best Case: **O(1)**  
+- Worst Case: **O(n²)**  
 
-Worst Case: O(n²)
+### Space Complexity
+- **O(1)**
 
-Space Complexity
+---
 
-O(1) — in-place sorting algorithm.
+## Program 4: Polynomial Evaluation Using Horner’s Method (horne.java)
 
-3. Early Duplicate Detection (EarlyDupe.java)
-Aim
-
-To detect the presence of duplicate elements in an array using an early termination approach.
-
-Algorithm / Pseudocode
-
-Read array elements
-
-Compare each element with remaining elements
-
-If duplicate is found
-Print duplicate detected
-Terminate execution
-
-If no duplicates found
-Print unique elements message
-
-Variables Used
-Variable	Description
-arr[]	Input array
-i, j	Loop counters
-flag	Indicates duplicate detection
-Logic / Working
-
-The algorithm checks every element against the rest of the array.
-When a duplicate is found, the program immediately stops further comparisons.
-This early exit improves performance compared to full traversal.
-
-Time Complexity
-
-Best Case: O(1) (duplicate found early)
-
-Worst Case: O(n²)
-
-Space Complexity
-
-O(1) — no extra memory used.
-
-4. Polynomial Evaluation Using Horner’s Method (horne.java)
-Aim
-
+### Aim
 To evaluate a polynomial expression efficiently using Horner’s method.
 
-Algorithm / Pseudocode
+### Algorithm / Pseudocode
+1. Input polynomial coefficients  
+2. Input value of x  
+3. Initialize result with first coefficient  
+4. For remaining coefficients  
+   - result = result × x + coefficient  
+5. Display result  
 
-Input polynomial coefficients
+### Variables Used
+- **coeff[]** — Polynomial coefficients  
+- **x** — Input value  
+- **result** — Computed polynomial value  
+- **i** — Loop counter  
 
-Input value of x
+### Logic / Working
+Horner’s method evaluates the polynomial in nested form.  
+It reduces the number of multiplication operations and improves efficiency.
 
-Initialize result with first coefficient
+### Time Complexity
+- **O(n)** — where n is the degree of the polynomial.
 
-For each remaining coefficient
-result = result × x + coefficient
+### Space Complexity
+- **O(1)**
 
-Display result
+---
 
-Variables Used
-Variable	Description
-coeff[]	Polynomial coefficients
-x	Input value
-result	Stores evaluated value
-i	Loop counter
-Logic / Working
+## Program 5: Linear Search (LinearSearch.java)
 
-Horner’s method reduces the number of multiplications required.
-Instead of calculating powers separately, the polynomial is evaluated in nested form.
-This improves computational efficiency.
-
-Time Complexity
-
-O(n) — where n is the degree of the polynomial.
-
-Space Complexity
-
-O(1) — constant extra space.
-
-5. Linear Search (LinearSearch.java)
-Aim
-
+### Aim
 To search for a given element in an array using the Linear Search technique.
 
-Algorithm / Pseudocode
+### Algorithm / Pseudocode
+1. Input array elements  
+2. Input key element  
+3. Traverse array sequentially  
+4. If element found  
+   - Print position  
+   - Stop execution  
+5. If not found  
+   - Print not found message  
 
-Input array elements
+### Variables Used
+- **arr[]** — Input array  
+- **key** — Element to be searched  
+- **i** — Loop counter  
 
-Input key element to search
+### Logic / Working
+Linear Search checks each element one by one.  
+Search stops when the element is found or when the array ends.
 
-Traverse array from beginning
+### Time Complexity
+- Best Case: **O(1)**  
+- Worst Case: **O(n)**  
 
-If current element equals key
-Display position
-Stop execution
+### Space Complexity
+- **O(1)**
 
-If traversal completes
-Display not found
+---
 
-Variables Used
-Variable	Description
-arr[]	Input array
-key	Element to be searched
-i	Loop counter
-Logic / Working
+## Program 6: Missing Number in Consecutive Sequence (nConsecutive.java)
 
-Linear Search checks elements sequentially.
-The search continues until the required element is found or the array ends.
-It is simple but slower for large datasets.
-
-Time Complexity
-
-Best Case: O(1)
-
-Worst Case: O(n)
-
-Space Complexity
-
-O(1)
-
-6. Missing Number in Consecutive Sequence (nConsecutive.java)
-Aim
-
+### Aim
 To find the missing number from a sequence of consecutive integers without using arithmetic operations.
 
-Algorithm / Pseudocode
+### Algorithm / Pseudocode
+1. Initialize result variable  
+2. Traverse array and update result using logical operations  
+3. Return final result as missing number  
 
-Initialize result variable
+### Variables Used
+- **arr[]** — Input array  
+- **result** — Missing number storage  
+- **i** — Loop counter  
 
-Traverse given array and update result using bitwise operations
+### Logic / Working
+The algorithm applies logical operations to eliminate existing numbers.  
+The remaining value represents the missing number.
 
-Return final value as missing number
+### Time Complexity
+- **O(n)**
 
-Variables Used
-Variable	Description
-arr[]	Input array
-result	Stores missing number
-i	Loop counter
-Logic / Working
+### Space Complexity
+- **O(1)**
 
-The algorithm applies logical bitwise operations to cancel out existing numbers.
-The remaining value represents the missing number in the sequence.
+---
 
-Time Complexity
+## Program 7: Power Calculation Using Recursion (power.java)
 
-O(n) — single traversal of array.
-
-Space Complexity
-
-O(1) — constant extra space.
-
-7. Power Calculation Using Recursion (power.java)
-Aim
-
+### Aim
 To compute the power of a number using recursion.
 
-Algorithm / Pseudocode
+### Algorithm / Pseudocode
+1. Input base and exponent  
+2. If exponent equals zero  
+   - Return 1  
+3. Multiply base with recursive call  
+4. Return result  
 
-Input base and exponent
+### Variables Used
+- **base** — Base number  
+- **exponent** — Power value  
+- **result** — Output result  
 
-If exponent equals 0
-Return 1
+### Logic / Working
+The function multiplies the base value recursively.  
+Each recursive call reduces the exponent until the base case is reached.
 
-Multiply base with recursive call using exponent-1
+### Time Complexity
+- **O(n)** — where n is exponent value.
 
-Return result
+### Space Complexity
+- **O(n)** — recursive stack usage.
 
-Variables Used
-Variable	Description
-base	Base value
-exponent	Power value
-result	Computed output
-Logic / Working
+---
 
-The function repeatedly multiplies the base value using recursion.
-Each recursive call reduces the exponent until it reaches zero.
+## Program 8: Selection Sort (selectionSortAlgo.java)
 
-Time Complexity
+### Aim
+To sort an array using the Selection Sort algorithm.
 
-O(n) — where n is the exponent value.
+### Algorithm / Pseudocode
+1. Traverse array  
+2. Find minimum element  
+3. Swap with current position  
+4. Repeat until sorted  
 
-Space Complexity
+### Variables Used
+- **arr[]** — Input array  
+- **minIndex** — Index of minimum element  
+- **i, j** — Loop counters  
+- **temp** — Swap variable  
 
-O(n) — recursive call stack.
+### Logic / Working
+Selection Sort selects the smallest element and places it in the correct position.  
+Sorting progresses gradually.
 
-8. Selection Sort (selectionSortAlgo.java)
-Aim
+### Time Complexity
+- Best Case: **O(n²)**  
+- Average Case: **O(n²)**  
+- Worst Case: **O(n²)**  
 
-To sort an array of integers using the Selection Sort algorithm.
+### Space Complexity
+- **O(1)**
 
-Algorithm / Pseudocode
+---
 
-Traverse array from first position
+## Program 9: String Permutation (StringPerm.java)
 
-Find minimum element in remaining array
+### Aim
+To generate all permutations of a given string using recursion.
 
-Swap minimum with current position
+### Algorithm / Pseudocode
+1. Input string  
+2. If string empty  
+   - Print permutation  
+3. Fix one character  
+4. Recursively permute remaining string  
 
-Repeat for remaining elements
+### Variables Used
+- **str** — Input string  
+- **prefix** — Fixed part  
+- **i** — Loop counter  
 
-Variables Used
-Variable	Description
-arr[]	Input array
-minIndex	Index of minimum element
-i, j	Loop counters
-temp	Temporary swap variable
-Logic / Working
+### Logic / Working
+Each recursive call fixes one character.  
+Remaining characters are permuted recursively until all combinations are generated.
 
-Selection Sort repeatedly selects the smallest element and places it at the correct position.
-The array becomes sorted gradually.
+### Time Complexity
+- **O(n!)**
 
-Time Complexity
+### Space Complexity
+- **O(n)**
 
-Best Case: O(n²)
+---
 
-Average Case: O(n²)
+## Program 10: Towers of Hanoi (TowersOfHanoi.java)
 
-Worst Case: O(n²)
+### Aim
+To solve the Towers of Hanoi problem using recursion and display disk movements.
 
-Space Complexity
+### Algorithm / Pseudocode
+1. Input number of disks  
+2. Move n-1 disks from source to auxiliary  
+3. Move largest disk to destination  
+4. Move n-1 disks from auxiliary to destination  
 
-O(1) — in-place sorting.
+### Variables Used
+- **n** — Number of disks  
+- **source** — Source rod  
+- **auxiliary** — Helper rod  
+- **destination** — Target rod  
 
-9. String Permutations (StringPerm.java)
-Aim
+### Logic / Working
+The problem is solved by dividing it into smaller recursive subproblems.  
+Disks are moved according to rules until all reach the destination rod.
 
-To generate all possible permutations of a given string using recursion.
+### Time Complexity
+- **O(2ⁿ)**
 
-Algorithm / Pseudocode
-
-Input string
-
-If string is empty
-Print permutation
-
-For each character
-Fix character
-Recursively permute remaining string
-
-Variables Used
-Variable	Description
-str	Input string
-prefix	Fixed permutation part
-i	Loop counter
-Logic / Working
-
-The algorithm fixes characters one by one and recursively generates permutations of remaining characters.
-This continues until all possible combinations are printed.
-
-Time Complexity
-
-O(n!) — factorial growth due to permutations.
-
-Space Complexity
-
-O(n) — recursion stack depth.
-
-10. Towers of Hanoi (TowersOfHanoi.java)
-Aim
-
-To solve the Towers of Hanoi problem using a recursive algorithm and display disk movements.
-
-Algorithm / Pseudocode
-
-Input number of disks
-
-Move n-1 disks from source to auxiliary
-
-Move largest disk to destination
-
-Move n-1 disks from auxiliary to destination
-
-Repeat recursively
-
-Variables Used
-Variable	Description
-n	Number of disks
-source	Source rod
-auxiliary	Helper rod
-destination	Target rod
-Logic / Working
-
-The problem is divided recursively into smaller subproblems.
-Each step moves disks while maintaining the rule constraints until the final solution is achieved.
-
-Time Complexity
-
-O(2ⁿ) — exponential recursive calls.
-
-Space Complexity
-
-O(n) — recursion stack depth.
+### Space Complexity
+- **O(n)** — recursion stack depth.
