@@ -3,6 +3,7 @@
 This repository contains Java implementations of fundamental algorithms with documentation including aim, pseudocode, variables used, logic, time complexity, and space complexity.
 
 ---
+# LAB 1
 
 ## Program 1: Ball Tips Problem (BallTips.java)
 
@@ -191,6 +192,22 @@ Worst Case: O(n)
 
 ### Space Complexity
 O(1)
+
+### Observations
+| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
+|---------------|--------------------|------------------------|---------------------|
+| 100           | 0.093              | 0.257                  | 11.484              |
+| 500           | 0.045              | 0.487                  | 57.447              |
+| 1000          | 0.051              | 0.999                  | 196.425             |
+| 2000          | 0.045              | 1.946                  | 719.601             |
+| 5000          | 0.046              | 4.739                  | 4195.327            |
+| 10000         | 0.045              | 9.762                  | 16508.514           |
+| 15000         | 0.047              | 14.971                 | 36964.035           |
+
+
+### Recorded Graph
+<img width="1200" height="800" alt="LS G" src="https://github.com/user-attachments/assets/0e37eb40-0b9d-40a4-96fe-a81cb4be1257" />
+
 
 ---
 
