@@ -12,14 +12,13 @@ To calculate the number of times a ball will bounce until its velocity drops bel
 ### Pseudocode
 
 ALGO CountBounces(velocity)
-resistance ← 0.57
-threshold ← 1
-IF velocity < threshold  
-    RETURN 0  
-END IF  
-
-newVelocity ← velocity × resistance  
-RETURN 1 + CountBounces(newVelocity)  
+    resistance ← 0.57
+    threshold ← 1
+    IF velocity < threshold  
+        RETURN 0  
+    END IF  
+    newVelocity ← velocity × resistance  
+    RETURN 1 + CountBounces(newVelocity)  
 
 ### Variables Used
 - velocity — Current velocity of the ball  
