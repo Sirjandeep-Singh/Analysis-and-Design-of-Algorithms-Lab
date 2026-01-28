@@ -4,9 +4,9 @@ public class EarlyDupe {
     private static int earliestDuplicate(int[] arr){
         int size = arr.length;
         int uppermid = (size + 1)/2;
-        for(int i = 0 ; i < arr.length/2; i++){
-            for(int j = 0 ; j < arr.length/2 ; j++){
-                if(arr[i] == arr[j]) return j;
+        for(int i = uppermid - 1 ; i >= 0; i--){
+            for(int j = i - 1 ; j >= 0 ; j--){
+                if(arr[i] == arr[j]) uppermid = i;
             }
         }
         return uppermid;

@@ -1,9 +1,11 @@
 package LAB2;
+import java.security.SecureRandom;
 import java.util.concurrent.ThreadLocalRandom;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.PrintWriter;
 import java.io.FileWriter;
+import java.security.SecureRandom;
 
 public class TimingAlgorithms{
 
@@ -16,10 +18,13 @@ public class TimingAlgorithms{
     }
 
     public static int generateRandom(int[] arr, int n){
+        SecureRandom random = new SecureRandom();
         for(int i = 0 ; i < n ; i++){
-            arr[i] = ThreadLocalRandom.current().nextInt(0, 100000);
+//            arr[i] = ThreadLocalRandom.current().nextInt(0, 100000000);
+            arr[i] = random.nextInt(0, 1000000000);
         }
-        return ThreadLocalRandom.current().nextInt();
+//        return ThreadLocalRandom.current().nextInt(0, 100000000);
+        return random.nextInt(0, 1000000000);
     }
 
     public long bestCaseTime(int size){
@@ -28,11 +33,11 @@ public class TimingAlgorithms{
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-            InsSort.bestCaseSetup(arr);
-//            target = BinSearch.bestCaseSetup(arr, target);
+//            InsSort.bestCaseSetup(arr);
+            target = BinSearch.bestCaseSetup(arr, target);
             long start = System.nanoTime();
-            InsSort.algorithm(arr, target);
-//            BinSearch.algorithm(arr, target);
+//            InsSort.algorithm(arr, target);
+            BinSearch.algorithm(arr, target, 0, size - 1);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;
@@ -46,11 +51,11 @@ public class TimingAlgorithms{
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-            InsSort.worstCaseSetup(arr);
-//            target = BinSearch.worstCaseSetup(arr, target);
+//            InsSort.worstCaseSetup(arr);
+            target = BinSearch.worstCaseSetup(arr, target);
             long start = System.nanoTime();
-            InsSort.algorithm(arr, target);
-//            BinSearch.algorithm(arr, target);
+//            InsSort.algorithm(arr, target);
+            BinSearch.algorithm(arr, target, 0, size - 1);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;
@@ -64,11 +69,11 @@ public class TimingAlgorithms{
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-            InsSort.averageCaseSetup(arr);
-//            target = BinSearch.averageCaseSetup(arr, target);
+//            InsSort.averageCaseSetup(arr);
+            target = BinSearch.averageCaseSetup(arr, target);
             long start = System.nanoTime();
-            InsSort.algorithm(arr, target);
-//            BinSearch.algorithm(arr, target);
+//            InsSort.algorithm(arr, target);
+            BinSearch.algorithm(arr, target, 0, size - 1);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;

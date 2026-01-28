@@ -1,5 +1,5 @@
 package LAB2;
-
+import java.util.Arrays;
 //public class BinSearch implements Algorithm{
 //
 //    @Override
@@ -37,6 +37,8 @@ package LAB2;
 //    }
 //}
 
+import java.util.Arrays;
+
 public class BinSearch {
 
     public static int algorithmit(int[] arr, int target){
@@ -63,14 +65,17 @@ public class BinSearch {
     }
 
     public static int averageCaseSetup(int[] arr, int target) {
+        Arrays.sort(arr);
         return target;
     }
 
     public static int worstCaseSetup(int[] arr, int target) {
+        Arrays.sort(arr);
         return -1;
     }
 
     public static int bestCaseSetup(int[] arr, int target) {
+        Arrays.sort(arr);
         int mid = arr.length/2;
         return arr[mid];
     }
@@ -81,7 +86,7 @@ public class BinSearch {
 //        int[] cases = {100,200,500,1000,2000,5000,10000,100000};
 //        BinSearch obj = new BinSearch();
 //        int[] arr = {1, 3, 31, 54, 13, 542};
-//        System.out.println(obj.algorithm(arr, 542));
+//        System.out.println(algorithm(arr, -1, 0, 5));
         TimingAlgorithms time = new TimingAlgorithms();
         time.initiate("binary_Search", cases);
     }
