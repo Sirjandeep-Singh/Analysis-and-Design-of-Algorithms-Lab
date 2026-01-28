@@ -36,14 +36,14 @@ public class selectionSortAlgo {
 //        selectionSort(arr, n);
 //        for(int x : arr){
 //            System.out.print(x + " ");
+////
+//        for(int n : scales){
+//            int[] arr = new int[n];
+//            System.out.println("Worst Case Time for " + n + " elements is: " + TimeAlgo.worstCaseAlgoTimeArr(n, "SelectionSort"));
+//            System.out.println("Best Case Time for " + n + " elements is: " + TimeAlgo.bestCaseAlgoTimeArr(n, "SelectionSort"));
+//            System.out.println("Average Case Time for " + n + " elements is: " + TimeAlgo.averageCaseAlgoTimeArr(n, "SelectionSort"));
+//            System.out.println();
 //
-        for(int n : scales){
-            int[] arr = new int[n];
-            System.out.println("Worst Case Time for " + n + " elements is: " + TimeAlgo.worstCaseAlgoTimeArr(n));
-            System.out.println("Best Case Time for " + n + " elements is: " + TimeAlgo.bestCaseAlgoTimeArr(n));
-            System.out.println("Average Case Time for " + n + " elements is: " + TimeAlgo.averageCaseAlgoTimeArr(n));
-            System.out.println();
-
-        }
+//        }
     }
 }
