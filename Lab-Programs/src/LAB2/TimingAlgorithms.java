@@ -5,16 +5,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.PrintWriter;
 import java.io.FileWriter;
-import java.security.SecureRandom;
 
 public class TimingAlgorithms{
 
-    int CASES = 100;
-    InsSort algo;
-    public void TimingAlgorithms(){
-//        CASES = 100;
-        algo = new InsSort();
-//        algo = k;
+    int CASES;
+    Algorithm algo;
+    public TimingAlgorithms(Algorithm k, int CASES){
+        this.CASES = CASES;
+        algo = k;
     }
 
     public static int generateRandom(int[] arr, int n){
@@ -28,16 +26,13 @@ public class TimingAlgorithms{
     }
 
     public long bestCaseTime(int size){
-//            target = algo.bestCaseSetup
         long totaltime = 0;
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-//            InsSort.bestCaseSetup(arr);
-            target = BinSearch.bestCaseSetup(arr, target);
+            target = algo.bestCaseSetup(arr, target);
             long start = System.nanoTime();
-//            InsSort.algorithm(arr, target);
-            BinSearch.algorithm(arr, target, 0, size - 1);
+            algo.algorithm(arr, target);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;
@@ -46,16 +41,13 @@ public class TimingAlgorithms{
     }
 
     public long worstCaseTime(int size){
-//            target = algo.bestCaseSetup
         long totaltime = 0;
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-//            InsSort.worstCaseSetup(arr);
-            target = BinSearch.worstCaseSetup(arr, target);
+            target = algo.worstCaseSetup(arr, target);
             long start = System.nanoTime();
-//            InsSort.algorithm(arr, target);
-            BinSearch.algorithm(arr, target, 0, size - 1);
+            algo.algorithm(arr, target);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;
@@ -64,16 +56,13 @@ public class TimingAlgorithms{
     }
 
     public long averageCaseTime(int size){
-//            target = algo.bestCaseSetup
         long totaltime = 0;
         for(int i = 0 ; i < CASES; i++){
             int[] arr = new int[size];
             int target = generateRandom(arr, size);
-//            InsSort.averageCaseSetup(arr);
-            target = BinSearch.averageCaseSetup(arr, target);
+            target = algo.averageCaseSetup(arr, target);
             long start = System.nanoTime();
-//            InsSort.algorithm(arr, target);
-            BinSearch.algorithm(arr, target, 0, size - 1);
+            algo.algorithm(arr, target);
             long end = System.nanoTime();
             long duration = end - start;
             totaltime += duration;
@@ -81,8 +70,8 @@ public class TimingAlgorithms{
         return totaltime/CASES;
     }
 
-    public void initiate(String fileName, int[] cases){
-        Path filePath = Paths.get("Lab-Programs/src/LAB2/Data/" + fileName + ".csv");
+    public void initiate(int[] cases){
+        Path filePath = Paths.get("Lab-Programs/src/LAB2/Data/" + algo.getName() + ".csv");
         try(PrintWriter pr = new PrintWriter(new FileWriter(filePath.toFile()))){
             pr.println("n,BestCase,AverageCase,WorstCase");
             for(int size : cases){
@@ -92,9 +81,9 @@ public class TimingAlgorithms{
                 long worstCaseTime = worstCaseTime(size);
                 System.out.println("Working average");
                 long averageCaseTime = averageCaseTime(size);
-                System.out.println("Best Case Time For "+ fileName + " For Size " + size + " is: " + bestCaseTime);
-                System.out.println("Average Case Time For "+ fileName + " For Size " + size + " is: " + averageCaseTime);
-                System.out.println("Worst Case Time For "+ fileName + " For Size " + size + " is: " + worstCaseTime);
+                System.out.println("Best Case Time For "+ algo.getName() + " For Size " + size + " is: " + bestCaseTime);
+                System.out.println("Average Case Time For "+ algo.getName() + " For Size " + size + " is: " + averageCaseTime);
+                System.out.println("Worst Case Time For "+ algo.getName() + " For Size " + size + " is: " + worstCaseTime);
                 System.out.println();
                 pr.println(size + "," + bestCaseTime + "," + averageCaseTime + "," + worstCaseTime);
                 pr.flush();
