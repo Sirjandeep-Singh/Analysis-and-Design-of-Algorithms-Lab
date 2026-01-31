@@ -411,8 +411,131 @@ CALL TowersOfHanoi(n - 1, auxiliary, source, destination)
 The problem is divided recursively into smaller subproblems.  
 Disks are moved step by step until all reach the destination rod.
 
+
+
 ### Time Complexity
 O(2ⁿ)
 
 ### Space Complexity
 O(n)
+
+---
+# LAB 2
+
+---
+
+## Program 1: Insertion Sort
+
+### Aim
+To sort a given array of integers using the Insertion Sort algorithm and analyze its performance for different input sizes.
+
+### Pseudocode
+
+ALGO InsertionSort  
+FOR i ← 1 TO n - 1  
+    key ← arr[i]  
+    j ← i - 1  
+    WHILE j ≥ 0 AND arr[j] > key  
+        arr[j + 1] ← arr[j]  
+        j ← j - 1  
+    END WHILE  
+    arr[j + 1] ← key  
+END FOR  
+
+### Variables Used
+- arr[] — Input array  
+- n — Size of array  
+- i — Outer loop counter  
+- j — Inner loop counter  
+- key — Element to be inserted  
+
+### Logic / Working
+Insertion Sort works by dividing the array into sorted and unsorted parts.  
+Each element from the unsorted part is picked and placed at the correct position in the sorted part.  
+This process continues until the entire array becomes sorted.
+
+### Time Complexity
+- Best Case: **O(n)**  
+- Average Case: **O(n²)**  
+- Worst Case: **O(n²)**  
+
+### Space Complexity
+- **O(1)** — In-place sorting algorithm  
+
+---
+
+### Observation Table (Time in Nanoseconds)
+
+| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
+|---------------|--------------------|------------------------|---------------------|
+| 100           | 3678               | 13096                  | 12020               |
+| 200           | 1313               | 113182                 | 87439               |
+| 500           | 602                | 26130                  | 31509               |
+| 1000          | 1112               | 80331                  | 110336              |
+| 2000          | 2208               | 249392                 | 380637              |
+| 5000          | 3907               | 1410931                | 2144402             |
+| 10000         | 6915               | 5580710                | 8665187             |
+| 100000        | 71445              | 568508900              | 956806469           |
+
+---
+
+## Program 2: Binary Search
+
+### Aim
+To search for a given element in a sorted array using the Binary Search algorithm and analyze its performance.
+
+### Pseudocode
+
+ALGO RecursiveBinarySearch(arr, low, high, key)  
+IF low > high  
+    RETURN "Not Found"  
+END IF  
+
+mid ← (low + high) / 2  
+
+IF arr[mid] == key  
+    RETURN "Found"  
+ELSE IF arr[mid] < key  
+    RETURN RecursiveBinarySearch(arr, mid + 1, high, key)  
+ELSE  
+    RETURN RecursiveBinarySearch(arr, low, mid - 1, key)  
+END IF  
+
+
+### Variables Used
+- arr[] — Sorted input array  
+- key — Element to search  
+- low — Starting index, always starts with 0
+- high — Ending index, always starts with 'n - 1' i.e. the last index.
+- mid — Middle index  
+
+### Logic / Working
+Binary Search works by repeatedly dividing the search interval in half.  
+The middle element is compared with the search key.  
+Based on comparison, the search space is reduced to either left or right half.  
+This continues until the element is found or the search space becomes empty.
+
+### Time Complexity
+- Best Case: **O(1)**  
+- Average Case: **O(log n)**  
+- Worst Case: **O(log n)**  
+
+### Space Complexity
+- **O(log n)** — Recursion stack  
+
+---
+
+### Observation Table (Time in Nanoseconds)
+
+| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
+|---------------|--------------------|------------------------|---------------------|
+| 100           | 386                | 167                    | 189                 |
+| 200           | 171                | 152                    | 107                 |
+| 500           | 82                 | 103                    | 76                  |
+| 1000          | 84                 | 112                    | 82                  |
+| 2000          | 90                 | 126                    | 112                 |
+| 5000          | 119                | 154                    | 129                 |
+| 10000         | 178                | 172                    | 155                 |
+| 100000        | 500                | 639                    | 478                 |
+
+
