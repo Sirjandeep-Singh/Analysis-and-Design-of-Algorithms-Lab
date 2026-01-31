@@ -480,8 +480,7 @@ This process continues until the entire array becomes sorted.
 ---
 
 ### Recorded Graph
-<img width="1200" height="800" alt="INS SORT" src="https://github.com/user-attachments/assets/5643aac0-8a9f-493d-9d2f-e9b05a7032ac" />
-
+<img width="1200" height="800" alt="INS SORT GRAP" src="https://github.com/user-attachments/assets/adc8c749-03ed-4969-b5b9-717533e3eb49" />
 
 ---
 
@@ -547,6 +546,7 @@ This continues until the element is found or the search space becomes empty.
 ---
 
 ### Recorded Graph
-<img width="1200" height="800" alt="Binary Search" src="https://github.com/user-attachments/assets/ca11b6a3-74e5-48e6-ae4e-2c38f19e57ab" />
+<img width="1200" height="800" alt="BIN SEARCH GRAPH" src="https://github.com/user-attachments/assets/72c75818-b083-4b29-a52f-4dd2322f638d" />
+
 
 
