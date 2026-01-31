@@ -479,6 +479,12 @@ This process continues until the entire array becomes sorted.
 
 ---
 
+### Recorded Graph
+<img width="1200" height="800" alt="INS SORT" src="https://github.com/user-attachments/assets/5643aac0-8a9f-493d-9d2f-e9b05a7032ac" />
+
+
+---
+
 ## Program 2: Binary Search
 
 ### Aim
@@ -537,5 +543,10 @@ This continues until the element is found or the search space becomes empty.
 | 5000          | 119                | 154                    | 129                 |
 | 10000         | 178                | 172                    | 155                 |
 | 100000        | 500                | 639                    | 478                 |
+
+---
+
+### Recorded Graph
+<img width="1200" height="800" alt="Binary Search" src="https://github.com/user-attachments/assets/ca11b6a3-74e5-48e6-ae4e-2c38f19e57ab" />
 
 
