@@ -99,33 +99,30 @@ To detect duplicate elements in an array using early termination with the maximu
 
 ### Pseudocode
 
-ALGO FindDuplicate (maxRange, arr)
-int[] freq = new int[maxRange + 1]
-FOR i ← 0 TO n - 1  
-        IF freq[arr[i]] == 1  
-            PRINT "Duplicate Found"  
-            EXIT  
-        END IF  
-        freq[arr[i]]++
+ALGO FindDuplicate arr)
+RES ← arr.length / 2 + 1
+FOR i ← arr.length/2 TO 1  
+    FOR j ← i - 1 TO 1 
+        IF arr[i] == arr[j]
+              RES ← i
+        END IF
+    END FOR
 END FOR  
-
-PRINT "No Duplicate Found"  
 
 ### Variables Used
 - arr[] — Input array  
 - i, j — Loop counters
-- freq[] - frequency array
-- maxRange - Maximum value of an element that can occur  
-
+- RES — Stores the Result of the algorithm.
+  
 ### Logical Reasoning
-If we know the maximum value of an element possible, we track the frequency of each number's appearances in a hashmap.
-If any number appears more than once we can detect it immediately.
+We know that in the worst case the "arr.length/2 + 1"th index will be the duplicate. we use nested for loops in the first half to find for 
+a duplicate that appears before it.
 
 ### Time Complexity  
-Worst Case: O(n)
+Worst Case: O(n^2)
 
 ### Space Complexity
-O(n)
+O(1)
 
 ---
 
