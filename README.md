@@ -27,13 +27,13 @@ ALGO CountBounces(velocity)
 - resistance — Reduction factor  
 - count — Stores number of bounces  
 
-### Logical Reasoning
+### Algorithm Explanation
 The algorithm recursively reduces velocity after each bounce.  
 When velocity becomes less than the threshold, recursion stops.  
 Each recursive call contributes one bounce to the final count.
 
 ### Time Complexity
-O(n)
+O(log n)
 
 ### Space Complexity
 O(n)
@@ -61,15 +61,14 @@ END FOR
 - n — Size of array  
 - i, j — Loop counters  
 - temp — Swap variable
-- n — size of array
 
-### Logical Reasoning
+### Algorithm Explanation
 Adjacent elements are compared and swapped if they are in the wrong order.  
 After each pass, the largest element moves to the end of the array.  
 This continues until the array becomes sorted.
 
 ### Time Complexity
-Best Case: O(n^2)  
+Best Case: O(n²)  
 Average Case: O(n²)  
 Worst Case: O(n²)
 
@@ -95,11 +94,11 @@ O(1)
 ## Program 3: Early Duplicate Detection (EarlyDupe.java)
 
 ### Aim
-To detect duplicate elements in an array using early termination with the maximum range available.
+To detect duplicate elements in an array using early termination with at least half the array as duplicates.
 
 ### Pseudocode
 
-ALGO FindDuplicate arr)
+ALGO FindDuplicate (arr)
 RES ← arr.length / 2 + 1
 FOR i ← arr.length/2 TO 1  
     FOR j ← i - 1 TO 1 
@@ -114,12 +113,13 @@ END FOR
 - i, j — Loop counters
 - RES — Stores the Result of the algorithm.
   
-### Logical Reasoning
-We know that in the worst case the "arr.length/2 + 1"th index will be the duplicate. we use nested for loops in the first half to find for 
+### Algorithm Explanation
+We know that in the worst case the "arr.length/2 + 1"th index 
+will be the duplicate. we use nested for loops in the first half to find 
 a duplicate that appears before it.
 
 ### Time Complexity  
-Worst Case: O(n^2)
+Worst Case: O(n²)
 
 ### Space Complexity
 O(1)
@@ -134,9 +134,10 @@ To evaluate a polynomial expression efficiently using Horner’s method.
 ### Pseudocode
 
 ALGO HornerEvaluation(coeff, idx, m, x)  
-if(idx == m + 1) 
-    return 0
-RETURN coeff[idx] + x * HornerEvaluation(arr, idx + 1, m , x)
+IF(idx == m + 1) 
+    RETURN 0
+END IF
+RETURN coeff[idx] + x * HornerEvaluation(coeff, idx + 1, m , x)
 
 ### Variables Used
 - coeff[] — Polynomial coefficients  
@@ -144,7 +145,7 @@ RETURN coeff[idx] + x * HornerEvaluation(arr, idx + 1, m , x)
 - idx — tracking recursion stack
 - m — number of polynomial coefficients
 
-### Logical Reasoning
+### Algorithm Explanation
 Recursion is used to evaluate the polynomial.
 At each level of recursion stack we multiply it by constant x.
 
@@ -179,7 +180,7 @@ PRINT "Element Not Found"
 - i — Loop counter
 - n — size of array
 
-### Logical Reasoning
+### Algorithm Explanation
 Each element is checked sequentially.  
 The search stops when the element is found or array traversal ends.
 
@@ -233,7 +234,7 @@ PRINT result
 - result — Missing number
 - LowerLimit/UpperLimit — Limits/Boundaries of the n consecutive numbers
 
-### Logical Reasoning
+### Algorithm Explanation
 XOR operation cancels matching values.  
 The remaining value represents the missing number.
 
@@ -252,7 +253,7 @@ To compute the power of a number using recursion.
 
 ### Pseudocode
 
-## 1
+### Method 1
 ALGO Power(base, exponent)  
 IF exponent == 0  
     RETURN 1  
@@ -261,11 +262,11 @@ END IF
 temp ← Power(base, exponent/2)
 IF(exponent % 2 != 0)
     RETURN temp * temp * base
-ELSE IF
+ELSE
     RETURN temp * temp
 END IF
 
-## 2
+### Method 2
 ALGO Power(base, exponent)
 IF exponent == 0  
     RETURN 1  
@@ -279,7 +280,7 @@ RETURN base × Power(base, exponent - 1)
 - exponent — Power value
 - temp — Store the value of a calculation temporarily
 
-### Logical Reasoning
+### Algorithm Explanation
 The base is multiplied recursively.  
 Each recursive call reduces the exponent until base case condition is met.
 
@@ -321,7 +322,7 @@ END FOR
 - i, j — Loop counters
 - n — size of array
 
-### Logical Reasoning
+### Algorithm Explanation
 The smallest element is selected and placed at the correct position.  
 This process continues until the array becomes sorted.
 
@@ -356,7 +357,7 @@ To generate all permutations of a given string using recursion.
 
 ALGO StringPermutation(string, idx ← 1)
 IF idx == length(string)  
-    PRINT prefix  
+    PRINT string  
 ELSE  
     FOR i ← idx TO length(string) - 1
         string.swap(i , idx)  
@@ -366,10 +367,10 @@ ELSE
 END IF  
 
 ### Variables Used
-- strin — Input string  
+- string — Input string  
 - i — iterator   
 
-### Logical Reasoning
+### Algorithm Explanation
 One character is fixed at a time.  
 Remaining characters are permuted recursively.
 
@@ -388,14 +389,14 @@ To solve the Towers of Hanoi problem using recursion.
 
 ### Pseudocode
 
-ALGO TowersOfHanoi(n , source, auxiallary, destination)  
+ALGO TowersOfHanoi(n , source, auxiliary, destination)  
 IF n == 1  
     PRINT move disk from source to destination  
     RETURN  
 END IF  
 
 CALL TowersOfHanoi(n - 1, source, destination, auxiliary)  
-CALL TowersOfHanoi(1, source, auxillary, destination)
+CALL TowersOfHanoi(1, source, auxiliary, destination)
 CALL TowersOfHanoi(n - 1, auxiliary, source, destination)  
 
 ### Variables Used
@@ -404,7 +405,7 @@ CALL TowersOfHanoi(n - 1, auxiliary, source, destination)
 - auxiliary — Helper rod  
 - destination — Target rod  
 
-### Logical Reasoning
+### Algorithm Explanation
 The problem is divided recursively into smaller subproblems.  
 Disks are moved step by step until all reach the destination rod.
 
@@ -446,7 +447,7 @@ END FOR
 - j — Inner loop counter  
 - key — Element to be inserted  
 
-### Logic / Working
+### Algorithm Explanation
 Insertion Sort works by dividing the array into sorted and unsorted parts.  
 Each element from the unsorted part is picked and placed at the correct position in the sorted part.  
 This process continues until the entire array becomes sorted.
@@ -513,7 +514,7 @@ END IF
 - high — Ending index, always starts with 'n - 1' i.e. the last index.
 - mid — Middle index  
 
-### Logic / Working
+### Algorithm Explanation
 Binary Search works by repeatedly dividing the search interval in half.  
 The middle element is compared with the search key.  
 Based on comparison, the search space is reduced to either left or right half.  
