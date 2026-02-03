@@ -64,7 +64,7 @@ public class BinSearch implements Algorithm{
 
 
     public static void main(String[] args){
-        int[] cases = {100,200,500,1000,2000,5000, 10000, 100000};
+        int[] cases = {100,200,500,1000,2000,5000, 10000, 20000, 50000, 100000};
         BinSearch binObj = new BinSearch("binary_Search");
         TimingAlgorithms time = new TimingAlgorithms(binObj, 1000);
         time.initiate(cases);
