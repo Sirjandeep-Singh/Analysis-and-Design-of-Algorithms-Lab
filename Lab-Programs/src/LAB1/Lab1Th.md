@@ -199,7 +199,7 @@ O(1)
 
 
 ### Recorded Graph
-<img width="1200" height="800" alt="LS G" src="https://github.com/user-attachments/assets/0e37eb40-0b9d-40a4-96fe-a81cb4be1257" />
+<img width="1200" height="800" alt="LinearSearch" src="https://github.com/user-attachments/assets/d3b9ec77-91c7-45e1-9d10-5d75d2df33d2" />
 
 
 ---
