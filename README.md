@@ -204,7 +204,7 @@ O(1)
 
 
 ### Recorded Graph
-<img width="1200" height="800" alt="LS G" src="https://github.com/user-attachments/assets/0e37eb40-0b9d-40a4-96fe-a81cb4be1257" />
+<img width="1200" height="800" alt="LinearSearch" src="https://github.com/user-attachments/assets/280373f3-cd73-40ee-88f4-800c898ca9af" />
 
 
 ---
