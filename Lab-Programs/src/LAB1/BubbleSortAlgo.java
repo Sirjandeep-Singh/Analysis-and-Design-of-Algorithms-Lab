@@ -27,7 +27,7 @@ public class BubbleSortAlgo {
     }
 
     public static void main(String[] args){
-        int[] scales = {100,500,1000,2000,5000,10000,15000};
+//        int[] scales = {100,500,1000,2000,5000,10000,15000};
         //Used to test the algorithm
 //        int n = 10;
 //        int[] arr = new int[n];
@@ -36,7 +36,11 @@ public class BubbleSortAlgo {
 //        for(int x : arr){
 //            System.out.print(x + " ");
 //        }
-
+            int[] scales = new int[30];
+            for(int i = 0 ; i < 30 ; i++){
+                scales[i] = i == 0 ? 500 : scales[i - 1 ] + 500;
+            }
+            TimeAlgo.controller(scales, "BubbleSort");
 //        for(int n : scales){
 //            int[] arr = new int[n];
 //            System.out.println("Worst Case Time for " + n + " elements is: " + TimeAlgo.worstCaseAlgoTimeArr(n, "BubbleSort"));

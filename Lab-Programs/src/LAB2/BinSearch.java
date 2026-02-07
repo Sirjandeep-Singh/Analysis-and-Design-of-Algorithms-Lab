@@ -64,10 +64,15 @@ public class BinSearch implements Algorithm{
 
 
     public static void main(String[] args){
-        int[] cases = {100,200,500,1000,2000,5000, 10000, 20000, 50000, 100000};
+        int[] n = new int[500];
+        for(int i = 0 ; i < 500 ; i++){
+            n[i] = i == 0? 100 : n[i-1] + 100;
+        }
+//        System.out.println(cases[99]);
+
         BinSearch binObj = new BinSearch("binary_Search");
         TimingAlgorithms time = new TimingAlgorithms(binObj, 1000);
-        time.initiate(cases);
+        time.initiate(n);
 
 //        int[] arr = {1, 3, 31, 54, 13, 542};
 //        System.out.println(binObj.algorithm(arr, 542));

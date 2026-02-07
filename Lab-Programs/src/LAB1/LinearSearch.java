@@ -9,9 +9,11 @@ public class LinearSearch {
     }
 
     public static void main(String[] args){
-        int[] cases = {100, 500, 1000, 2000, 5000, 10000, 15000,};
-
-        TimeAlgo.controller(cases, "LinearSearch");
+        int[] scales = new int[1000];
+        for(int i = 0 ; i < 1000 ; i++){
+            scales[i] = i == 0 ? 100 : scales[i - 1 ] + 100;
+        }
+        TimeAlgo.controller(scales, "LinearSearch");
 //        for(int n : cases){
 //            System.out.println("Worst Case Time for " + n + " elements is: " + TimeAlgo.worstCaseAlgoTimeArr(n, "LinearSearch"));
 //            System.out.println("Best Case Time for " + n + " elements is: " + TimeAlgo.bestCaseAlgoTimeArr(n, "LinearSearch"));

@@ -30,7 +30,7 @@ public class selectionSortAlgo {
     }
 
     public static void main(String[] args){
-        int[] scales = {100,500,1000,2000,5000,10000,15000};
+//        int[] scales = {100,500,1000,2000,5000,10000,15000};
 //        Used to test the algorithm
 //        LAB1.TimeAlgo.generateRandom(arr, n);
 //        selectionSort(arr, n);
@@ -45,5 +45,11 @@ public class selectionSortAlgo {
 //            System.out.println();
 //
 //        }
+
+        int[] scales = new int[30];
+        for(int i = 0 ; i < 30 ; i++){
+            scales[i] = i == 0 ? 500 : scales[i - 1 ] + 500;
+        }
+        TimeAlgo.controller(scales, "SelectionSort");
     }
 }

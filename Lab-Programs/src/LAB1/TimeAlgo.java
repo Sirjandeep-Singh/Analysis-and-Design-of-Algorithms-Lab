@@ -47,20 +47,17 @@ public class TimeAlgo {
         for(int i = 0; i < CASES; i++){
             int target = generateRandom(arr, n);
             //2
-            //selectionSortAlgo.oppositeselectionSort(arr, n);
+            selectionSortAlgo.oppositeselectionSort(arr, n);
             //3
-            //LAB1.BubbleSortAlgo.bubbleSortOpposite(arr, n);
-            //Instant st = Instant.now();
+//            LAB1.BubbleSortAlgo.bubbleSortOpposite(arr, n);
             long st = System.nanoTime();
             //1
-            LAB1.LinearSearch.linearSearch(arr, -1, 0, n);
+//            LAB1.LinearSearch.linearSearch(arr, -1, 0, n);
             //2
             selectionSortAlgo.selectionSort(arr, n);
             //3
-            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
-            //Instant end = Instant.now();
+//            LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             long end = System.nanoTime();
-            //long duration = java.time.Duration.between(st,end).toNanos();
             long duration = end - st;
             totalTimeTaken += duration;
         }
@@ -75,18 +72,16 @@ public class TimeAlgo {
             int target = generateRandom(arr, n);
 
             //2
-//            selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
             //3
-            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
-            //Instant st = Instant.now();
+//            LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             long st = System.nanoTime();
             //1
-            LAB1.LinearSearch.linearSearch(arr, arr[0], 0, n);
+//            LAB1.LinearSearch.linearSearch(arr, arr[0], 0, n);
             //2
-            //selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
             //3
-            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
-            //Instant end = Instant.now();
+//            LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             long end = System.nanoTime();
             long duration = end - st;
             totalTimeTaken += duration;
@@ -100,15 +95,13 @@ public class TimeAlgo {
         long totalTimeTaken = 0;
         for(int i = 0; i < CASES; i++){
             int target = generateRandom(arr, n);
-            //Instant st = Instant.now();
             long st = System.nanoTime();
             //1
-            LAB1.LinearSearch.linearSearch(arr, target, 0, n);
+//            LAB1.LinearSearch.linearSearch(arr, target, 0, n);
             //2
-//            selectionSortAlgo.selectionSort(arr, n);
+            selectionSortAlgo.selectionSort(arr, n);
             //3
-            //LAB1.BubbleSortAlgo.bubbleSort(arr, n);
-//            Instant end = Instant.now();
+//            LAB1.BubbleSortAlgo.bubbleSort(arr, n);
             long end = System.nanoTime();
             long duration = end - st;
             totalTimeTaken += duration;

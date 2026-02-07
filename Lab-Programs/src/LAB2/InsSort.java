@@ -62,10 +62,13 @@ public class InsSort implements Algorithm {
     public static void main(String[] args){
 //        int[] cases = {100,200,500,1000,2000,5000,10000,15000};
 
-        int[] cases = {100,200,500,1000,2000,5000,10000,20000,50000,100000};
+        int[] n = new int[250];
+        for(int i = 0 ; i < 250 ; i++){
+            n[i] = i == 0? 100 : n[i-1] + 100;
+        }
         InsSort insObj = new InsSort("insertion_Sort");
         TimingAlgorithms time = new TimingAlgorithms(insObj,1000);
-        time.initiate(cases);
+        time.initiate(n);
 
 //        int[] arr = {1, 3, 31, 54, 13, 542};
 //        obj.algorithm(arr, 0);
