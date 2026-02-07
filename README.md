@@ -75,19 +75,9 @@ Worst Case: O(n²)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 3.000              | 10.010                 | 6.999               |
-| 500           | 45.500             | 126.506                | 64.008              |
-| 1000          | 151.031            | 368.580                | 222.537             |
-| 2000          | 556.294            | 1189.827               | 895.322             |
-| 5000          | 3617.659           | 6499.183               | 5615.436            |
-| 10000         | 13980.492          | 25109.154              | 22234.117           |
-| 15000         | 31302.309          | 66761.630              | 49055.820           |
-
 ### Recorded Graph
-<img width="1200" height="800" alt="BB Sort Graph" src="https://github.com/user-attachments/assets/7b5c6aae-c2f4-4e83-b654-89dde4f92939" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/95568fd5-3985-4573-8d59-21df97520bcc" />
+
 
 ---
 
@@ -191,20 +181,8 @@ Worst Case: O(n)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 0.093              | 0.257                  | 11.484              |
-| 500           | 0.045              | 0.487                  | 57.447              |
-| 1000          | 0.051              | 0.999                  | 196.425             |
-| 2000          | 0.045              | 1.946                  | 719.601             |
-| 5000          | 0.046              | 4.739                  | 4195.327            |
-| 10000         | 0.045              | 9.762                  | 16508.514           |
-| 15000         | 0.047              | 14.971                 | 36964.035           |
-
-
 ### Recorded Graph
-<img width="1200" height="800" alt="LinearSearch" src="https://github.com/user-attachments/assets/280373f3-cd73-40ee-88f4-800c898ca9af" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/a381f6d8-2293-478d-9dba-942c3da27e15" />
 
 
 ---
@@ -332,19 +310,9 @@ O(n²)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 5.000              | 8.000                  | 11.005              |
-| 500           | 191.109            | 187.026                | 187.533             |
-| 1000          | 727.119            | 733.611                | 741.856             |
-| 2000          | 3163.123           | 3126.884               | 3039.476            |
-| 5000          | 20228.129          | 20229.693              | 20328.371           |
-| 10000         | 78455.976          | 78262.249              | 79097.123           |
-| 15000         | 183968.866         | 185613.463             | 178893.970          |
-
 ### Recorded Graph
-<img width="1200" height="800" alt="SS SORT" src="https://github.com/user-attachments/assets/9c611012-90aa-4c7e-9b3e-8bc9f48ea608" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/0543fbe9-722e-44fa-94ca-6fb12b356abd" />
+
 
 ---
 
@@ -422,7 +390,7 @@ O(n)
 
 ---
 
-## Program 1: Insertion Sort
+## Program 1: Insertion Sort(InsSort.java)
 
 ### Aim
 To sort a given array of integers using the Insertion Sort algorithm and analyze its performance for different input sizes.
@@ -462,29 +430,12 @@ This process continues until the entire array becomes sorted.
 
 ---
 
-### Observation Table (Time in Nanoseconds)
-
-| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 805                | 1756                   | 8776                |
-| 200           | 255                | 3634                   | 4367                |
-| 500           | 410                | 16800                  | 24884               |
-| 1000          | 736                | 59757                  | 91012               |
-| 2000          | 1467               | 228526                 | 346857              |
-| 5000          | 3417               | 1383104                | 2095113             |
-| 10000         | 6778               | 5538482                | 8497658             |
-| 20000         | 13476              | 22021393               | 36513503            |
-| 50000         | 34132              | 139579324              | 237804771           |
-| 100000        | 69091              | 556136188              | 950106590           |
-
----
-
 ### Recorded Graph
-<img width="1200" height="800" alt="INS SORT GRAP" src="https://github.com/user-attachments/assets/adc8c749-03ed-4969-b5b9-717533e3eb49" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/4d07b890-80a2-475a-a5b5-1ff34e04facd" />
 
 ---
 
-## Program 2: Binary Search
+## Program 2: Binary Search(BinSearch.java)
 
 ### Aim
 To search for a given element in a sorted array using the Binary Search algorithm and analyze its performance.
@@ -530,25 +481,127 @@ This continues until the element is found or the search space becomes empty.
 
 ---
 
-### Observation Table (Time in Nanoseconds)
+### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/0630ff44-e203-416e-ab1e-8afc7baadf99" />
 
-| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 344                | 189                    | 159                 |
-| 200           | 99                 | 141                    | 82                  |
-| 500           | 75                 | 97                     | 65                  |
-| 1000          | 72                 | 104                    | 77                  |
-| 2000          | 103                | 135                    | 109                 |
-| 5000          | 126                | 158                    | 132                 |
-| 10000         | 147                | 183                    | 142                 |
-| 20000         | 191                | 220                    | 175                 |
-| 50000         | 390                | 403                    | 372                 |
-| 100000        | 583                | 592                    | 509                 |
+---
+
+# LAB 3
+
+## Program 1: Merge Sort (MergeSort.java)
+
+### Aim
+To sort a given array of integers using the Merge Sort algorithm based on the divide and conquer technique.
+
+### Pseudocode
+
+ALGO MergeSort(arr, start, end)  
+    IF start ≥ end  
+        RETURN  
+    END IF  
+    mid ← (start + end) / 2  
+    MergeSort(arr, start, mid)  
+    MergeSort(arr, mid + 1, end)  
+    Merge(arr, start, mid, end)  
+
+ALGO Merge(arr, start, mid, end)  
+    tempArr1 = arr[start:mid+1]
+    tempArr2 = arr[mid+1:end+1]  
+    tempArr1.append(∞)
+    tempArr2.append(∞)
+    Merge elements back into original array in sorted order  
+
+### Variables Used
+- arr — Array to be sorted  
+- start — Starting index of the array  
+- end — Ending index of the array  
+- mid — Middle index used to divide the array  
+- tempArr1 — Temporary array for left sub-array  
+- tempArr2 — Temporary array for right sub-array  
+- i, j — Index pointers for temporary arrays  
+- k — Index pointer for merged array  
+
+### Algorithm Explanation
+The array is recursively divided into two halves until single-element sub-arrays are obtained.  
+These sub-arrays are then merged in sorted order using temporary arrays.  
+Sentinel values are used to simplify the comparison logic during merging.  
+This process continues until the entire array is sorted.
+
+### Time Complexity
+O(n log n)
+
+### Space Complexity
+O(n)
 
 ---
 
 ### Recorded Graph
-<img width="1200" height="800" alt="BIN SEARCH GRAPH" src="https://github.com/user-attachments/assets/72c75818-b083-4b29-a52f-4dd2322f638d" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
 
+---
+
+## Program 2: Quick Sort (QuickSort.java)
+
+### Aim
+To sort a given array of integers using the Quick Sort algorithm by partitioning the array around a pivot element.
+
+### Pseudocode
+
+ALGO QuickSort(arr, start, end)  
+    IF start ≥ end  
+        RETURN  
+    END IF  
+    pivotIndex ← Partition(arr, start, end)  
+    QuickSort(arr, start, pivotIndex - 1)  
+    QuickSort(arr, pivotIndex + 1, end)  
+
+ALGO Partition(arr, start, end)  
+    pivot ← arr[start]  
+    i ← start + 1  
+    j ← end  
+    WHILE i ≤ j  
+        WHILE arr[i] ≤ pivot  
+            i ← i + 1  
+        END WHILE  
+        WHILE arr[j] > pivot  
+            j ← j - 1  
+        END WHILE  
+        IF i < j  
+            swap(arr[i], arr[j])  
+        END IF  
+    END WHILE  
+    swap(arr[start], arr[j])  
+    RETURN j  
+
+### Variables Used
+- arr — Array to be sorted  
+- start — Starting index of the array  
+- end — Ending index of the array  
+- pivot — Element chosen for partitioning  
+- i — Left pointer for scanning elements  
+- j — Right pointer for scanning elements  
+- pivotIndex — Final position of the pivot  
+
+### Algorithm Explanation
+Quick Sort selects the first element as the pivot and partitions the array such that elements smaller than the pivot are placed to its left and larger elements to its right.  
+The pivot is then placed in its correct sorted position.  
+The same process is recursively applied to the left and right sub-arrays.
+
+### Time Complexity
+- Best Case: O(n log n)  
+- Average Case: O(n log n)  
+- Worst Case: O(n²)  
+
+### Space Complexity
+- Average Case: O(log n)  
+- Worst Case: O(n)
+
+---
+
+### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/42d71fe9-a122-480f-8eb1-f810184947d6" />
+
+
+---
 
 
