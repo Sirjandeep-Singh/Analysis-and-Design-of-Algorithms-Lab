@@ -2,7 +2,7 @@
 
 ---
 
-## Program 1: Insertion Sort
+## Program 1: Insertion Sort(InsSort.java)
 
 ### Aim
 To sort a given array of integers using the Insertion Sort algorithm and analyze its performance for different input sizes.
@@ -27,7 +27,7 @@ END FOR
 - j — Inner loop counter
 - key — Element to be inserted
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Insertion Sort works by dividing the array into sorted and unsorted parts.  
 Each element from the unsorted part is picked and placed at the correct position in the sorted part.  
 This process continues until the entire array becomes sorted.
@@ -42,29 +42,12 @@ This process continues until the entire array becomes sorted.
 
 ---
 
-### Observation Table (Time in Nanoseconds)
-
-| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 805                | 1756                   | 8776                |
-| 200           | 255                | 3634                   | 4367                |
-| 500           | 410                | 16800                  | 24884               |
-| 1000          | 736                | 59757                  | 91012               |
-| 2000          | 1467               | 228526                 | 346857              |
-| 5000          | 3417               | 1383104                | 2095113             |
-| 10000         | 6778               | 5538482                | 8497658             |
-| 20000         | 13476              | 22021393               | 36513503            |
-| 50000         | 34132              | 139579324              | 237804771           |
-| 100000        | 69091              | 556136188              | 950106590           |
-
----
-
 ### Recorded Graph
-<img width="1200" height="800" alt="INS SORT GRAPH" src="https://github.com/user-attachments/assets/adc8c749-03ed-4969-b5b9-717533e3eb49" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/4d07b890-80a2-475a-a5b5-1ff34e04facd" />
 
 ---
 
-## Program 2: Binary Search
+## Program 2: Binary Search(BinSearch.java)
 
 ### Aim
 To search for a given element in a sorted array using the Binary Search algorithm and analyze its performance.
@@ -94,7 +77,7 @@ END IF
 - high — Ending index, always starts with 'n - 1' i.e. the last index.
 - mid — Middle index
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Binary Search works by repeatedly dividing the search interval in half.  
 The middle element is compared with the search key.  
 Based on comparison, the search space is reduced to either left or right half.  
@@ -110,24 +93,7 @@ This continues until the element is found or the search space becomes empty.
 
 ---
 
-### Observation Table (Time in Nanoseconds)
-
-| n (Input Size) | Best Case Time (ns) | Average Case Time (ns) | Worst Case Time (ns) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 344                | 189                    | 159                 |
-| 200           | 99                 | 141                    | 82                  |
-| 500           | 75                 | 97                     | 65                  |
-| 1000          | 72                 | 104                    | 77                  |
-| 2000          | 103                | 135                    | 109                 |
-| 5000          | 126                | 158                    | 132                 |
-| 10000         | 147                | 183                    | 142                 |
-| 20000         | 191                | 220                    | 175                 |
-| 50000         | 390                | 403                    | 372                 |
-| 100000        | 583                | 592                    | 509                 |
+### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/0630ff44-e203-416e-ab1e-8afc7baadf99" />
 
 ---
-
-### Recorded Graph
-<img width="1200" height="800" alt="BIN SEARCH GRAPH" src="https://github.com/user-attachments/assets/72c75818-b083-4b29-a52f-4dd2322f638d" />
-
-

@@ -27,7 +27,7 @@ ALGO CountBounces(velocity)
 - resistance — Reduction factor  
 - count — Stores number of bounces  
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The algorithm recursively reduces velocity after each bounce.  
 When velocity becomes less than the threshold, recursion stops.  
 Each recursive call contributes one bounce to the final count.
@@ -62,7 +62,7 @@ END FOR
 - i, j — Loop counters  
 - temp — Swap variable
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Adjacent elements are compared and swapped if they are in the wrong order.  
 After each pass, the largest element moves to the end of the array.  
 This continues until the array becomes sorted.
@@ -103,7 +103,7 @@ END FOR
 - i, j — Loop counters
 - RES — Stores the Result of the algorithm.
   
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 We know that in the worst case the "arr.length/2 + 1"th index 
 will be the duplicate. we use nested for loops in the first half to find 
 a duplicate that appears before it.
@@ -135,7 +135,7 @@ RETURN coeff[idx] + x * HornerEvaluation(coeff, idx + 1, m , x)
 - idx — tracking recursion stack
 - m — number of polynomial coefficients
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Recursion is used to evaluate the polynomial.
 At each level of recursion stack we multiply it by constant x.
 
@@ -170,7 +170,7 @@ PRINT "Element Not Found"
 - i — Loop counter
 - n — size of array
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Each element is checked sequentially.  
 The search stops when the element is found or array traversal ends.
 
@@ -212,7 +212,7 @@ PRINT result
 - result — Missing number
 - LowerLimit/UpperLimit — Limits/Boundaries of the n consecutive numbers
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 XOR operation cancels matching values.  
 The remaining value represents the missing number.
 
@@ -258,7 +258,7 @@ RETURN base × Power(base, exponent - 1)
 - exponent — Power value
 - temp — Store the value of a calculation temporarily
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The base is multiplied recursively.  
 Each recursive call reduces the exponent until base case condition is met.
 
@@ -300,7 +300,7 @@ END FOR
 - i, j — Loop counters
 - n — size of array
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The smallest element is selected and placed at the correct position.  
 This process continues until the array becomes sorted.
 
@@ -338,7 +338,7 @@ END IF
 - string — Input string  
 - i — iterator   
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 One character is fixed at a time.  
 Remaining characters are permuted recursively.
 
@@ -373,7 +373,7 @@ CALL TowersOfHanoi(n - 1, auxiliary, source, destination)
 - auxiliary — Helper rod  
 - destination — Target rod  
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The problem is divided recursively into smaller subproblems.  
 Disks are moved step by step until all reach the destination rod.
 
@@ -415,7 +415,7 @@ END FOR
 - j — Inner loop counter  
 - key — Element to be inserted  
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Insertion Sort works by dividing the array into sorted and unsorted parts.  
 Each element from the unsorted part is picked and placed at the correct position in the sorted part.  
 This process continues until the entire array becomes sorted.
@@ -465,7 +465,7 @@ END IF
 - high — Ending index, always starts with 'n - 1' i.e. the last index.
 - mid — Middle index  
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Binary Search works by repeatedly dividing the search interval in half.  
 The middle element is compared with the search key.  
 Based on comparison, the search space is reduced to either left or right half.  

@@ -22,7 +22,7 @@ RETURN 1 + CountBounces(newVelocity)
 - resistance — Reduction factor
 - count — Stores number of bounces
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The algorithm recursively reduces velocity after each bounce.  
 When velocity becomes less than the threshold, recursion stops.  
 Each recursive call contributes one bounce to the final count.
@@ -57,7 +57,7 @@ END FOR
 - i, j — Loop counters
 - temp — Swap variable
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Adjacent elements are compared and swapped if they are in the wrong order.  
 After each pass, the largest element moves to the end of the array.  
 This continues until the array becomes sorted.
@@ -70,19 +70,9 @@ Worst Case: O(n²)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 3.000              | 10.010                 | 6.999               |
-| 500           | 45.500             | 126.506                | 64.008              |
-| 1000          | 151.031            | 368.580                | 222.537             |
-| 2000          | 556.294            | 1189.827               | 895.322             |
-| 5000          | 3617.659           | 6499.183               | 5615.436            |
-| 10000         | 13980.492          | 25109.154              | 22234.117           |
-| 15000         | 31302.309          | 66761.630              | 49055.820           |
-
 ### Recorded Graph
-<img width="1200" height="800" alt="BB Sort Graph" src="https://github.com/user-attachments/assets/7b5c6aae-c2f4-4e83-b654-89dde4f92939" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/95568fd5-3985-4573-8d59-21df97520bcc" />
+
 
 ---
 
@@ -108,7 +98,7 @@ END FOR
 - i, j — Loop counters
 - RES — Stores the Result of the algorithm.
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 We know that in the worst case the "arr.length/2 + 1"th index
 will be the duplicate. we use nested for loops in the first half to find
 a duplicate that appears before it.
@@ -140,7 +130,7 @@ RETURN coeff[idx] + x * HornerEvaluation(coeff, idx + 1, m , x)
 - idx — tracking recursion stack
 - m — number of polynomial coefficients
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Recursion is used to evaluate the polynomial.
 At each level of recursion stack we multiply it by constant x.
 
@@ -175,7 +165,7 @@ PRINT "Element Not Found"
 - i — Loop counter
 - n — size of array
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 Each element is checked sequentially.  
 The search stops when the element is found or array traversal ends.
 
@@ -186,20 +176,8 @@ Worst Case: O(n)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 0.093              | 0.257                  | 11.484              |
-| 500           | 0.045              | 0.487                  | 57.447              |
-| 1000          | 0.051              | 0.999                  | 196.425             |
-| 2000          | 0.045              | 1.946                  | 719.601             |
-| 5000          | 0.046              | 4.739                  | 4195.327            |
-| 10000         | 0.045              | 9.762                  | 16508.514           |
-| 15000         | 0.047              | 14.971                 | 36964.035           |
-
-
 ### Recorded Graph
-<img width="1200" height="800" alt="LinearSearch" src="https://github.com/user-attachments/assets/d3b9ec77-91c7-45e1-9d10-5d75d2df33d2" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/a381f6d8-2293-478d-9dba-942c3da27e15" />
 
 
 ---
@@ -229,7 +207,7 @@ PRINT result
 - result — Missing number
 - LowerLimit/UpperLimit — Limits/Boundaries of the n consecutive numbers
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 XOR operation cancels matching values.  
 The remaining value represents the missing number.
 
@@ -275,7 +253,7 @@ RETURN base × Power(base, exponent - 1)
 - exponent — Power value
 - temp — Store the value of a calculation temporarily
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The base is multiplied recursively.  
 Each recursive call reduces the exponent until base case condition is met.
 
@@ -317,7 +295,7 @@ END FOR
 - i, j — Loop counters
 - n — size of array
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The smallest element is selected and placed at the correct position.  
 This process continues until the array becomes sorted.
 
@@ -327,19 +305,9 @@ O(n²)
 ### Space Complexity
 O(1)
 
-### Observations
-| n (Input Size) | Best Case Time (µs) | Average Case Time (µs) | Worst Case Time (µs) |
-|---------------|--------------------|------------------------|---------------------|
-| 100           | 5.000              | 8.000                  | 11.005              |
-| 500           | 191.109            | 187.026                | 187.533             |
-| 1000          | 727.119            | 733.611                | 741.856             |
-| 2000          | 3163.123           | 3126.884               | 3039.476            |
-| 5000          | 20228.129          | 20229.693              | 20328.371           |
-| 10000         | 78455.976          | 78262.249              | 79097.123           |
-| 15000         | 183968.866         | 185613.463             | 178893.970          |
-
 ### Recorded Graph
-<img width="1200" height="800" alt="SS SORT" src="https://github.com/user-attachments/assets/9c611012-90aa-4c7e-9b3e-8bc9f48ea608" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/0543fbe9-722e-44fa-94ca-6fb12b356abd" />
+
 
 ---
 
@@ -365,7 +333,7 @@ END IF
 - string — Input string
 - i — iterator
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 One character is fixed at a time.  
 Remaining characters are permuted recursively.
 
@@ -400,7 +368,7 @@ CALL TowersOfHanoi(n - 1, auxiliary, source, destination)
 - auxiliary — Helper rod
 - destination — Target rod
 
-### LAB3.Algorithm Explanation
+### Algorithm Explanation
 The problem is divided recursively into smaller subproblems.  
 Disks are moved step by step until all reach the destination rod.
 
