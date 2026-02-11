@@ -599,9 +599,10 @@ The same process is recursively applied to the left and right sub-arrays.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/608dfd3c-9d0b-4b46-9006-7fd7ffd087c4" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/e3bf98d8-3dcd-4962-b6c3-ed3e9552bbef" />
 
 
+---
 
 ---
 
