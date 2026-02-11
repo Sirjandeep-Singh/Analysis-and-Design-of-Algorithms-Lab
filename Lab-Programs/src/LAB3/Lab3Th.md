@@ -111,7 +111,7 @@ The same process is recursively applied to the left and right sub-arrays.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/2f13aa35-a5fe-43be-a9df-69529de7a798" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/8b5822c3-dc65-4f47-9ba7-a5d3639c2e15" />
 
 
 ---
