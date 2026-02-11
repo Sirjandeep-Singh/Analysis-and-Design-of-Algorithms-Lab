@@ -599,7 +599,8 @@ The same process is recursively applied to the left and right sub-arrays.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/42d71fe9-a122-480f-8eb1-f810184947d6" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/608dfd3c-9d0b-4b46-9006-7fd7ffd087c4" />
+
 
 
 ---
