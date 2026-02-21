@@ -203,6 +203,7 @@ The final boundary points form the convex hull.
 
 ### Space Complexity
 `O(n)`
+ 
 ---
 
 ### Recorded Graph
