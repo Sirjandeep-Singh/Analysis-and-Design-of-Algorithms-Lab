@@ -72,7 +72,8 @@ public class QuickSort implements Algorithm {
         for(int i = 0 ; i < 100 ; i++){
             n[i] = i == 0? 100 : n[i-1] + 100;
         }
-        frameWork.initiate(n);
+        boolean[] choices = {false, false, true};
+        frameWork.initiate(n, choices);
     }
 
 }

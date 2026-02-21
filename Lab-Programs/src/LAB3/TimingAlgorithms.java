@@ -8,12 +8,19 @@ import java.nio.file.Paths;
 import java.security.SecureRandom;
 
 public class TimingAlgorithms {
-
+    String path;
     int CASES;
     Algorithm algo;
     public TimingAlgorithms(Algorithm k, int CASES){
         this.CASES = CASES;
         algo = k;
+        path = "Lab-Programs/src/LAB3/Data/";
+    }
+
+    public TimingAlgorithms(Algorithm k, int CASES, String path){
+        this.CASES = CASES;
+        algo = k;
+        this.path = path;
     }
 
     public static int generateRandom(int[] arr, int n){
@@ -71,20 +78,32 @@ public class TimingAlgorithms {
         return totaltime/CASES;
     }
 
-    public void initiate(int[] cases){
-        Path filePath = Paths.get("Lab-Programs/src/LAB3/Data/" + algo.getName() + ".csv");
+    public void initiate(int[] sizes, boolean[] choices){
+        Path filePath = Paths.get(path + algo.getName() + ".csv");
         try(PrintWriter pr = new PrintWriter(new FileWriter(filePath.toFile()))){
             pr.println("n,BC,AC,WC");
-            for(int size : cases){
-                System.out.println("Working Best");
-                long bestCaseTime = bestCaseTime(size);
-                System.out.println("Working worst");
-                long worstCaseTime = worstCaseTime(size);
-                System.out.println("Working average");
-                long averageCaseTime = averageCaseTime(size);
-                System.out.println("Best Case Time For "+ algo.getName() + " For Size " + size + " is: " + bestCaseTime);
-                System.out.println("Average Case Time For "+ algo.getName() + " For Size " + size + " is: " + averageCaseTime);
-                System.out.println("Worst Case Time For "+ algo.getName() + " For Size " + size + " is: " + worstCaseTime);
+            for(int size : sizes){
+                long bestCaseTime = -1;
+                long worstCaseTime = -1;
+                long averageCaseTime = -1;
+                if(choices[0]){
+                    System.out.println("Working Best");
+                    bestCaseTime = bestCaseTime(size);
+                    System.out.println("Best Case Time For "+ algo.getName() + " For Size " + size + " is: " + bestCaseTime);
+                }
+
+                if(choices[2]){
+                    System.out.println("Working worst");
+                    worstCaseTime = worstCaseTime(size);
+                    System.out.println("Worst Case Time For "+ algo.getName() + " For Size " + size + " is: " + worstCaseTime);
+                }
+
+                if(choices[1]){
+                    System.out.println("Working average");
+                    averageCaseTime = averageCaseTime(size);
+                    System.out.println("Average Case Time For "+ algo.getName() + " For Size " + size + " is: " + averageCaseTime);
+                }
+
                 System.out.println();
                 pr.println(size + "," + bestCaseTime + "," + averageCaseTime + "," + worstCaseTime);
                 pr.flush();

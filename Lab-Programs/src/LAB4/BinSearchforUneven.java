@@ -7,7 +7,7 @@ public class BinSearchforUneven {
         int start = 0;
         int end = arr.length - 1;
         while(start <= end){
-            int pivot = (start + end)/3;
+            int pivot = start + (end-start)/3;
             if(arr[pivot] == target) return pivot;
             if(target < arr[pivot]){
                 end = pivot - 1;
@@ -26,6 +26,6 @@ public class BinSearchforUneven {
             System.out.print(i + " ");
         }
         System.out.println();
-        System.out.println(algorithm(arr,2));
+        System.out.println(algorithm(arr,5));
     }
 }
