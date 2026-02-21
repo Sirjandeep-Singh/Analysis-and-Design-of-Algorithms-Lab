@@ -56,7 +56,7 @@ public class TowersOfHanoi implements Algorithm {
         TowersOfHanoi th = new TowersOfHanoi("TowersOfHanoi");
         TimingAlgorithms framework = new TimingAlgorithms(th, 1000, "Lab-Programs/src/LAB1/Data/");
         int idx = 0;
-        int length = 100;
+        int length = 35;
         int[] sizes = new int[length];
         for(int i = 3 ; i <= (length * 1) + 2 ; i += 1){
             sizes[idx] = i;
