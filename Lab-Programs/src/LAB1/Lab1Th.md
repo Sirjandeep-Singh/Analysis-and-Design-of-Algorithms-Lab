@@ -370,4 +370,7 @@ Disks are moved step by step until all reach the destination rod.
 ### Space Complexity
 `O(n)`
 
+### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/125f942e-49e1-4795-b0b7-b2d65bc640ea" />
+
 ---
