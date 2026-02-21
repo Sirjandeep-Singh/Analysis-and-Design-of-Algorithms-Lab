@@ -761,7 +761,7 @@ Total number of triangles formed equals **nC3**.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/1aa2ab2b-4923-4d66-8761-22f237f42683" />
 
 ---
 
@@ -807,7 +807,7 @@ Final result is obtained by comparing results of left and right halves.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/6fe52cca-b3ee-4098-bcb8-ef646e6c0cdf" />
 
 ---
 
@@ -840,7 +840,7 @@ The algorithm greedily selects items with the highest ratio first.
 If full item cannot be taken, a fractional part is added.
 
 ### Time Complexity
-`O(n²) - Bubble Sort used, can be optimised to O(nlogn)`
+`O(n²) - Bubble Sort used, can be optimised to O(nlogn)` 
 
 ### Space Complexity
 `O(1)`
@@ -848,7 +848,7 @@ If full item cannot be taken, a fractional part is added.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/abf01b63-996e-4064-af7b-7015d0922214" />
 
 ---
 
@@ -892,7 +892,7 @@ Otherwise recursion continues only in the relevant half.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/38ff467b-43c3-431e-a2f6-f2c445f21472" />
 
 ---
 
@@ -930,7 +930,7 @@ The final boundary points form the convex hull.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/3a780ea0-4cfb-4671-8038-2ed9fff0ba19" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/59c6286d-29f5-4bff-8582-f0590c282faf" />
 
 ---
 
