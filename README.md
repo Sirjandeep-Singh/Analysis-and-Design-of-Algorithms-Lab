@@ -844,7 +844,7 @@ The algorithm greedily selects items with the highest ratio first.
 If full item cannot be taken, a fractional part is added.
 
 ### Time Complexity
-`O(n²) - Bubble Sort used, can be optimised to O(nlogn)` 
+`O(nlogn) - Quick Sort Used` 
 
 ### Space Complexity
 `O(1)`
