@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+
 public class KnapSack implements TwoDimAlgorithm {
     private int method;
     private String name;
@@ -72,12 +73,13 @@ public class KnapSack implements TwoDimAlgorithm {
     }
 
     private  int weightBought(double[] arr, int currentSpace){
-        if(arr[1] > currentSpace) return currentSpace;
-        return (int)arr[1];
+        if(arr[0] > currentSpace) return currentSpace;
+        return (int)arr[0];
     }
 
     private  void sort(double[][] arr, int method){
-           bubbleSort(arr, method);
+           //bubbleSort(arr, method);
+            QuickSort2D.QuickSort_2D_Desc(arr, method - 1, 0, arr.length - 1);
     }
 
     private  void bubbleSort(double[][] arr, int method){
@@ -147,7 +149,7 @@ public class KnapSack implements TwoDimAlgorithm {
 //            cleanIdx++;
 //        }
 
-        boolean[] choices = {false, false, true};
+        boolean[] choices = {false, true, false};
         int length = 100;
         int[][] sizes = new int[length][2];
         int idx = 0;
