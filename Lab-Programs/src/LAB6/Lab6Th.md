@@ -43,7 +43,7 @@ This ensures maximum number of non-overlapping activities.
 ---
 
 ### Recorded Graph
-
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/a22146c5-68e4-43ab-a4ec-ce9d995a26af" />
 
 ---
 
@@ -93,7 +93,7 @@ Otherwise, they are merged using union operation.
 ---
 
 ### Recorded Graph
-
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/5a4b9dd8-b8da-4b72-aef8-5988cb10db67" />
 
 ---
 
@@ -142,7 +142,7 @@ Priority queue ensures efficient minimum selection.
 ---
 
 ### Recorded Graph
-
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/097b5590-ce30-4db6-8808-0fd4c1fe99b4" />
 
 ---
 
@@ -190,7 +190,7 @@ DSU efficiently detects cycles.
 ---
 
 ### Recorded Graph
-
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/497aa872-10d0-48d6-a160-d2e8540f1999" />
 
 ---
 
@@ -240,6 +240,6 @@ Priority queue ensures efficient selection.
 ---
 
 ### Recorded Graph
-
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/f5be33ad-00b8-452f-b0ef-4dcd68797403" />
 
 ---
