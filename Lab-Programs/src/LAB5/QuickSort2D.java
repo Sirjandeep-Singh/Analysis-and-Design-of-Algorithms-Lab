@@ -1,11 +1,11 @@
 package LAB5;
-
+//QuickSort2D.QuickSort_2D_Desc(arr, method - 1, 0, arr.length - 1);
 public class QuickSort2D {
-    public static void QuickSort_2D(double[][] arr, int i, int start, int end){
+    public static void QuickSort_2D(double[][] arr, int sortIdx, int start, int end){
         if(start >= end) return;
-        int pivotIdx = partition(arr,i, start, end);
-        QuickSort_2D(arr, i, start, pivotIdx - 1);
-        QuickSort_2D(arr, i, pivotIdx + 1, end);
+        int pivotIdx = partition(arr,sortIdx, start, end);
+        QuickSort_2D(arr, sortIdx, start, pivotIdx - 1);
+        QuickSort_2D(arr, sortIdx, pivotIdx + 1, end);
     }
 
     private static int partition(double[][] arr, int idx ,int start, int end){

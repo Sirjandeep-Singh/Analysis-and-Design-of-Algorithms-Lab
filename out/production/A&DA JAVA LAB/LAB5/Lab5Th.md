@@ -116,7 +116,7 @@ The algorithm greedily selects items with the highest ratio first.
 If full item cannot be taken, a fractional part is added.
 
 ### Time Complexity
-`O(n²) - Bubble Sort used, can be optimised to O(nlogn)` 
+`O(nlogn) - Quick Sort Used` 
 
 ### Space Complexity
 `O(1)`
@@ -124,7 +124,8 @@ If full item cannot be taken, a fractional part is added.
 ---
 
 ### Recorded Graph
-<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/abf01b63-996e-4064-af7b-7015d0922214" />
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/d5a36abd-a924-46db-84b6-4d41bbc7ae72" />
+
 
 ---
 
