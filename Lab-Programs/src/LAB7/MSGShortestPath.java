@@ -9,7 +9,7 @@ public class MSGShortestPath implements TwoDimAlgorithm {
     // exists at a later stage compared to a vertex denoted with a smaller number
     private String name;
     private ArrayList<int[]> vertices;
-    private int[] nxtStgCost;
+    private int[] cost;
     private int[] d;
     private int[] p;
     public MSGShortestPath(String name){
@@ -20,11 +20,11 @@ public class MSGShortestPath implements TwoDimAlgorithm {
     public int[] algorithm(int[][] adjMatrix, int source){
         source = 0;
         int len = adjMatrix.length;
-        nxtStgCost = new int[len];
+        cost = new int[len];
         d = new int[len];
         //set the memoized array for dp
-        Arrays.fill(nxtStgCost, Integer.MAX_VALUE);
-        nxtStgCost[len - 1] = 0;
+        Arrays.fill(cost, Integer.MAX_VALUE);
+        cost[len - 1] = 0;
         int shortestPath = solveRecFwd(adjMatrix,0, len);
         int numOfStages = traverse(adjMatrix, source, 0);
         printPath(d, numOfStages);
@@ -52,17 +52,17 @@ public class MSGShortestPath implements TwoDimAlgorithm {
     }
 
     private int solveRecFwd(int[][] adjMatrix, int currentVertex, int len){
-        if(nxtStgCost[currentVertex] != Integer.MAX_VALUE) return nxtStgCost[currentVertex];
+        if(cost[currentVertex] != Integer.MAX_VALUE) return cost[currentVertex];
         for(int i = currentVertex + 1 ; i < len ; i++){
             if(adjMatrix[currentVertex][i] != 0){
                 int nextStageDist = solveRecFwd(adjMatrix, i, len);
-                if(nextStageDist + adjMatrix[currentVertex][i] < nxtStgCost[currentVertex]){
-                    nxtStgCost[currentVertex] = nextStageDist + adjMatrix[currentVertex][i];
+                if(nextStageDist + adjMatrix[currentVertex][i] < cost[currentVertex]){
+                    cost[currentVertex] = nextStageDist + adjMatrix[currentVertex][i];
                     d[currentVertex] = i;
                 }
             }
         }
-        return nxtStgCost[currentVertex];
+        return cost[currentVertex];
     }
 
     //For Backward approach we start with second last vertex unlike the forward approach
@@ -70,15 +70,15 @@ public class MSGShortestPath implements TwoDimAlgorithm {
     private int solveRecBwd(int[][] adjMatrix, int currentVertex, int len){
         for(int i = currentVertex + 1 ; i < len ; i++){
             if(adjMatrix[currentVertex][i] != 0){
-                int currNxtStgDist = adjMatrix[currentVertex][i] + nxtStgCost[i];
-                if(currNxtStgDist < nxtStgCost[currentVertex]){
-                    nxtStgCost[currentVertex] = currNxtStgDist;
+                int currNxtStgDist = adjMatrix[currentVertex][i] + cost[i];
+                if(currNxtStgDist < cost[currentVertex]){
+                    cost[currentVertex] = currNxtStgDist;
                     d[currentVertex] = i;
                 }
             }
         }
         if(currentVertex != 0 ) return solveRecBwd(adjMatrix,currentVertex - 1, len);
-        return nxtStgCost[0];
+        return cost[0];
     }
 
     private void printPath(int[]stageChoice, int numOfStages){
