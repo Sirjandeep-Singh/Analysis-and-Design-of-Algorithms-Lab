@@ -4,10 +4,10 @@ import LAB5.TwoDimAlgorithm;
 
 import java.util.*;
 
-public class MultiStageGraphBFSTraversal implements TwoDimAlgorithm {
+public class MultiStageGraphTraversal implements TwoDimAlgorithm {
     private String name;
     private ArrayList<int[]> vertices;
-    public MultiStageGraphBFSTraversal(String name){
+    public MultiStageGraphTraversal(String name){
         this.name = name;
     }
 
@@ -113,7 +113,7 @@ public class MultiStageGraphBFSTraversal implements TwoDimAlgorithm {
 //                {0,1,1,0},{0,0,0,1},{0,0,0,1},{0,0,0,0}
 //        };
 
-        MultiStageGraphBFSTraversal msg = new MultiStageGraphBFSTraversal("Hello");
+        MultiStageGraphTraversal msg = new MultiStageGraphTraversal("Hello");
         System.out.println(msg.solve(adjMatrix,0));
     }
 
