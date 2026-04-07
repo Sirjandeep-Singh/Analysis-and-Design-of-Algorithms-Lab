@@ -34,7 +34,7 @@ Traversal continues until no further edges are found.
 Each recursive return increments the stage count, representing levels in the graph.
 
 ### Time Complexity
-`O(V²)`
+`O(V)`
 
 ### Space Complexity
 `O(V)`
@@ -87,7 +87,7 @@ Previously computed results are stored in the `cost` array to avoid recomputatio
 The `d[]` array stores the next vertex in the optimal path, allowing path reconstruction.
 
 ### Time Complexity
-`O(V²)`
+`O(V*d)` - `d` being the maximum outdegree of a vertex
 
 ### Space Complexity
 `O(V)`
