@@ -1,4 +1,4 @@
-package LAB7;
+package LAB8;
 
 import LAB5.TwoDimAlgorithm;
 
@@ -30,6 +30,36 @@ public class MSGShortestPath implements TwoDimAlgorithm {
         printPath(d, numOfStages);
         return new int[]{shortestPath};
     }
+
+    public int[] algorithmFWDApp(int[][] adjMatrix, int source){
+        source = 0;
+        int len = adjMatrix.length;
+        cost = new int[len];
+        d = new int[len];
+        //set the memoized array for dp
+        Arrays.fill(cost, Integer.MAX_VALUE);
+        cost[len - 1] = 0;
+        int shortestPath = solveRecFwd(adjMatrix,0, len);
+        int numOfStages = traverse(adjMatrix, source, 0);
+        printPath(d, numOfStages);
+        return new int[]{shortestPath};
+    }
+
+    public int[] algorithmBWDApp(int[][] adjMatrix, int source){
+        source = 0;
+        int len = adjMatrix.length;
+        cost = new int[len];
+        d = new int[len];
+        //set the memoized array for dp
+        Arrays.fill(cost, Integer.MAX_VALUE);
+        cost[len - 1] = 0;
+        int shortestPath = solveRecBwd(adjMatrix,0, len);
+        int numOfStages = traverse(adjMatrix, source, 0);
+        printPath(d, numOfStages);
+        return new int[]{shortestPath};
+    }
+
+
 
     @Override
     public int bestCaseSetup(int[][] arr, int target){

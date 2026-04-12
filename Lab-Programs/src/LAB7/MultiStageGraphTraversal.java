@@ -37,31 +37,6 @@ public class MultiStageGraphTraversal implements TwoDimAlgorithm {
         return name;
     }
 
-//    private int solve(int[][] adjMatrix, int source){
-//        HashMap<Integer,Boolean> underProcessing = new HashMap<>();
-//
-//        Queue<Integer> q = new LinkedList<>();
-//        q.offer(source);
-//        underProcessing.put(source, true);
-//
-//        //offer poll
-//        int stages = 0;
-//        while(!q.isEmpty()){
-//            int qlen = q.size();
-//            for(int i = 0 ; i < qlen ; i++){
-//                int node = q.poll();
-//                for(int j = 0; j < adjMatrix.length; j++){
-//                    if(adjMatrix[node][j] > 0 && !underProcessing.getOrDefault(j, false)){
-//                        q.offer(j);
-//                        underProcessing.put(j, true);
-//                    }
-//                }
-//            }
-//        stages++;
-//        }
-//        return stages;
-//    }
-
     private int solve(int[][] adjMatrix, int source){
         int stages = 0;
         stages = traverse(adjMatrix, source, stages);
