@@ -1375,6 +1375,10 @@ The cost depends on the number of scalar multiplications required.
 
 ---
 
+### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/2e09a209-4237-4986-837b-efb7c8dee703" />
+
+---
 # LAB 9
 
 ---
@@ -1463,7 +1467,6 @@ Backtracking occurs when no valid position is found.
 
 ### Recorded Graph
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/ecd07023-8773-4005-9061-0197322713c2" />
-
 
 ---
 
