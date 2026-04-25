@@ -25,7 +25,8 @@ public class MSGShortestPath implements TwoDimAlgorithm {
         //set the memoized array for dp
         Arrays.fill(cost, Integer.MAX_VALUE);
         cost[len - 1] = 0;
-        int shortestPath = solveRecFwd(adjMatrix,0, len);
+//        int shortestPath = solveRecFwd(adjMatrix,0, len);
+        int shortestPath = solveFwd(adjMatrix, len);
         int numOfStages = traverse(adjMatrix, source, 0);
         printPath(d, numOfStages);
         return new int[]{shortestPath};
@@ -59,7 +60,37 @@ public class MSGShortestPath implements TwoDimAlgorithm {
         return new int[]{shortestPath};
     }
 
+    private int solveBwd(int[][] adjMatrix, int currentVertex, int len){
 
+        for (int u = 1; u < len; u++) {
+
+            for (int v = u - 1; v >= 0; v++) {
+                int distToStart = adjMatrix[v][u] + cost[v];
+                if (distToStart < cost[u]) {
+                    cost[u] = distToStart;
+                    d[u] = v;
+                }
+            }
+        }
+        return cost[len - 1];
+    }
+
+    //For Forward approach we start with second last vertex unlike the forward approach
+    //memo[len - 1] = 0 by default
+    private int solveFwd(int[][] adjMatrix, int len){
+
+        for (int u = len - 2; u < len; u++) {
+
+            for (int v = u + 1; v >= 0; v++) {
+                int distToEnd = adjMatrix[u][v] + cost[v];
+                if (distToEnd < cost[u]) {
+                    cost[u] = distToEnd;
+                    d[u] = v;
+                }
+            }
+        }
+        return cost[len - 1];
+    }
 
     @Override
     public int bestCaseSetup(int[][] arr, int target){

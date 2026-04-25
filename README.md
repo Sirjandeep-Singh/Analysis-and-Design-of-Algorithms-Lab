@@ -1375,4 +1375,9 @@ The cost depends on the number of scalar multiplications required.
 
 ---
 
+### Recorded Graph
+![img_3.png](img_3.png)
+
+---
+
 
