@@ -75,6 +75,9 @@ This continues until the array becomes sorted.
 ### Space Complexity
 `O(1)`
 
+### Use Cases
+- **Small Dataset Sorting:** Applied in embedded systems or scenarios where the dataset is tiny and implementation simplicity is preferred over efficiency.
+
 ### Recorded Graph
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/95568fd5-3985-4573-8d59-21df97520bcc" />
 
@@ -300,6 +303,10 @@ This process continues until the array becomes sorted.
 ### Space Complexity
 `O(1)`
 
+### Use Cases
+- **Memory-Constrained Systems:** Used in systems where write operations are expensive, as it performs at most O(n) swaps regardless of input.
+- **Sorting Small Lists:** Applied in scenarios like sorting a small hand of playing cards or a short leaderboard where simplicity and minimal swaps matter.
+
 ### Recorded Graph
 <img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/0543fbe9-722e-44fa-94ca-6fb12b356abd" />
 
@@ -337,6 +344,10 @@ Remaining characters are permuted recursively.
 
 ### Space Complexity
 `O(n)`
+
+### Use Cases
+- **Password Generation:** Used to generate all possible character arrangements for brute-force password recovery or testing tools.
+- **Anagram Detection:** Applied in word games and NLP tools to enumerate all rearrangements of a word for anagram matching.
 
 ---
 
@@ -422,6 +433,10 @@ This process continues until the entire array becomes sorted.
 ### Space Complexity
 - `O(1) — In-place sorting algorithm`
 
+### Use Cases
+- **Online Sorting:** Used when elements arrive one at a time and the list needs to remain sorted after each insertion, such as maintaining a live leaderboard.
+- **Nearly Sorted Data:** Applied in scenarios where the input is almost sorted (e.g., re-sorting a mostly sorted playlist), where it approaches O(n) performance.
+
 ---
 
 ### Recorded Graph
@@ -470,6 +485,10 @@ This continues until the element is found or the search space becomes empty.
 
 ### Space Complexity
 - `O(log n) — Recursion stack`
+
+### Use Cases
+- **Dictionary/Phone Book Lookup:** Used to efficiently locate a word or contact in a large sorted list without scanning every entry.
+- **Database Indexing:** Applied in database engines to search through sorted index structures (e.g., B-trees) for fast record retrieval.
 
 ---
 
@@ -524,6 +543,10 @@ This process continues until the entire array is sorted.
 
 ### Space Complexity
 `O(n)`
+
+### Use Cases
+- **External Sorting:** Used to sort data that is too large to fit in memory, such as sorting large log files stored on disk by reading and merging chunks.
+- **Sorting Linked Lists:** Preferred for sorting linked lists where random access is costly, as merge sort works efficiently with sequential access.
 
 ---
 
@@ -587,6 +610,10 @@ The same process is recursively applied to the left and right sub-arrays.
 ### Space Complexity
 - `Average Case: O(log n)`
 - `Worst Case: O(n)`
+
+### Use Cases
+- **In-Memory Sorting:** Widely used as the default sorting algorithm in standard libraries (e.g., Java's `Arrays.sort` for primitives) due to its excellent cache performance.
+- **Search Engine Ranking:** Applied to sort large collections of documents or search results by relevance score efficiently in memory.
 
 ---
 
@@ -724,6 +751,10 @@ O(n!)
 ### Space Complexity
 O(n) - Recursion Stack
 
+### Use Cases
+- **Password Generation:** Used to generate all possible character arrangements for brute-force password recovery or testing tools.
+- **Anagram Detection:** Applied in word games and NLP tools to enumerate all rearrangements of a word for anagram matching.
+
 ---
 
 # LAB 5
@@ -844,10 +875,14 @@ The algorithm greedily selects items with the highest ratio first.
 If full item cannot be taken, a fractional part is added.
 
 ### Time Complexity
-`O(nlogn) - Quick Sort Used` 
+`O(nlogn) - Quick Sort Used`
 
 ### Space Complexity
 `O(1)`
+
+### Use Cases
+- **Resource Allocation:** Used in project management to allocate a limited budget across divisible tasks to maximize total value or return.
+- **Cargo Loading:** Applied in logistics to load a freight container with divisible goods (e.g., liquids, grains) to maximize profit within a weight limit.
 
 ---
 
@@ -981,6 +1016,10 @@ This ensures maximum number of non-overlapping activities.
 ### Space Complexity
 `O(1)`
 
+### Use Cases
+- **Meeting Room Scheduling:** Used to schedule the maximum number of meetings in a single conference room without overlapping time slots.
+- **CPU Job Scheduling:** Applied in operating systems to maximize the number of jobs completed on a single processor within given time intervals.
+
 ---
 
 ### Recorded Graph
@@ -1080,6 +1119,10 @@ Priority queue ensures efficient minimum selection.
 ### Space Complexity
 `O(V)`
 
+### Use Cases
+- **GPS Navigation:** Used in mapping applications like Google Maps to find the shortest driving route between two locations on a road network.
+- **Network Routing Protocols:** Applied in protocols like OSPF to compute the shortest path for packet forwarding across network routers.
+
 ---
 
 ### Recorded Graph
@@ -1127,6 +1170,10 @@ DSU efficiently detects cycles.
 
 ### Space Complexity
 `O(E)`
+
+### Use Cases
+- **Telecommunications Network Design:** Used to lay the minimum length of cable to connect all offices in a city network at the lowest installation cost.
+- **Power Grid Planning:** Applied by electrical engineers to design minimum-cost power distribution networks connecting substations across a region.
 
 ---
 
@@ -1177,6 +1224,10 @@ Priority queue ensures efficient selection.
 
 ### Space Complexity
 `O(V)`
+
+### Use Cases
+- **Water Pipeline Infrastructure:** Used to design a minimum-cost pipeline network connecting all neighborhoods in a city starting from a single water source.
+- **LAN Network Cabling:** Applied to determine the minimum cabling required to connect all computers in a dense local area network with the lowest total wire length.
 
 ---
 
@@ -1373,6 +1424,10 @@ The cost depends on the number of scalar multiplications required.
 ### Space Complexity
 `O(n²)`
 
+### Use Cases
+- **Computer Graphics:** Used to optimize the order of transformation matrix multiplications (translation, rotation, scaling) applied to 3D objects to minimize computation.
+- **Scientific Computing:** Applied in machine learning pipelines to determine the optimal order of matrix operations in neural network computations, reducing overall multiplication cost.
+
 ---
 
 ### Recorded Graph
@@ -1423,6 +1478,10 @@ The final value gives the length of the LCS, and the sequence can be reconstruct
 ### Space Complexity
 `O(n × m)`
 
+### Use Cases
+- **Version Control (Diff Tools):** Used in tools like `git diff` to identify the common lines between two versions of a file and highlight what was added or removed.
+- **Bioinformatics:** Applied to compare DNA or protein sequences to find the longest shared genetic subsequence, helping identify evolutionary relationships.
+
 ---
 
 ## Program 2: N-Queens Problem (NQueens.java)
@@ -1462,6 +1521,10 @@ Backtracking occurs when no valid position is found.
 
 ### Space Complexity
 `O(N)`
+
+### Use Cases
+- **Constraint Satisfaction Problems:** Used as a benchmark for evaluating backtracking and constraint propagation techniques in AI and logic programming.
+- **VLSI Design:** Applied in chip design to place non-conflicting components on a grid layout, where each component must not interfere with others in the same row, column, or diagonal.
 
 ---
 
@@ -1509,6 +1572,10 @@ The optimal solution is stored in the last cell.
 ### Space Complexity
 `O(n × W)`
 
+### Use Cases
+- **Budget Allocation:** Used in finance to select a subset of investment projects within a fixed budget to maximize total expected return.
+- **File Backup Systems:** Applied to select which files to include in a backup given a storage size limit, maximizing the total importance or value of backed-up data.
+
 ---
 
 ### Recorded Graph
@@ -1552,6 +1619,10 @@ After all iterations, shortest paths between all pairs are obtained.
 
 ### Space Complexity
 `O(n²)`
+
+### Use Cases
+- **Network Latency Analysis:** Used in telecommunications to precompute the shortest communication delay between every pair of nodes in a network for routing optimization.
+- **Urban Transit Planning:** Applied by city planners to compute travel times between all pairs of stations in a metro or bus network to optimize transfer routes.
 
 ---
 
@@ -1598,6 +1669,10 @@ Dynamic programming avoids recomputation, making it efficient compared to brute 
 
 ### Space Complexity
 `O(n × 2ⁿ)`
+
+### Use Cases
+- **Delivery Route Optimization:** Used by logistics companies to find the shortest route for a delivery vehicle that must visit all customer locations exactly once and return to the depot.
+- **PCB Drilling Optimization:** Applied in manufacturing to determine the optimal order in which a drill should visit all hole positions on a printed circuit board, minimizing total drill travel distance.
 
 ---
 
@@ -1659,6 +1734,10 @@ Backtracking is used when no valid color is possible.
 ### Space Complexity
 `O(n)`
 
+### Use Cases
+- **Register Allocation in Compilers:** Used by compilers to assign a limited number of CPU registers to variables such that no two simultaneously live variables share the same register.
+- **Exam/Timetable Scheduling:** Applied to schedule exams so that no two exams sharing common students are held at the same time, with each time slot represented as a color.
+
 ---
 
 ### Recorded Graph
@@ -1716,6 +1795,10 @@ If yes, a Hamiltonian Cycle exists.
 ### Space Complexity
 `O(n)`
 
+### Use Cases
+- **Circuit Board Testing:** Used to determine if a test probe can visit every connection point on a circuit board exactly once and return to the start, minimizing probe repositioning.
+- **Network Topology Verification:** Applied to check whether a communication network has a route that traverses every node exactly once, useful for fault-tolerant ring network design.
+
 ---
 
 ### Recorded Graph
@@ -1764,6 +1847,10 @@ If all possibilities are exhausted, it returns false.
 
 ### Space Complexity
 `O(n)`
+
+### Use Cases
+- **Partition-Based Load Balancing:** Used to check if a set of tasks can be split into two groups with equal total processing time for balanced distribution across two processors.
+- **Cryptography and Key Generation:** Applied in certain cryptographic schemes to determine if a subset of values can combine to produce a target sum, forming the basis of subset-sum based encryption problems.
 
 ---
 
