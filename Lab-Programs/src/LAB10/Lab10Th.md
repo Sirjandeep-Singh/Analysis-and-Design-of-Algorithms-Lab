@@ -53,6 +53,7 @@ Backtracking is used when no valid color is possible.
 ---
 
 ### Recorded Graph
+<img width="593" height="367" alt="image" src="https://github.com/user-attachments/assets/64d89023-0e59-4872-8ed3-00e615f37d48" />
 
 ---
 
@@ -109,6 +110,7 @@ If yes, a Hamiltonian Cycle exists.
 ---
 
 ### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/b1b465ae-d557-45d0-a20d-1b78b05477cb" />
 
 ---
 
@@ -157,5 +159,6 @@ If all possibilities are exhausted, it returns false.
 ---
 
 ### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/d1ded5b2-9edf-4c64-a47d-39c160d2b00c" />
 
 ---
