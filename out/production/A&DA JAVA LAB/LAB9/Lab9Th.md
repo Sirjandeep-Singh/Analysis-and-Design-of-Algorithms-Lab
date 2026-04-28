@@ -44,11 +44,6 @@ The final value gives the length of the LCS, and the sequence can be reconstruct
 
 ---
 
-### Recorded Graph
-<!-- INSERT GRAPH IMAGE HERE -->
-
----
-
 ## Program 2: N-Queens Problem (NQueens.java)
 
 ### Aim
@@ -90,7 +85,8 @@ Backtracking occurs when no valid position is found.
 ---
 
 ### Recorded Graph
-<!-- INSERT GRAPH IMAGE HERE -->
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/ecd07023-8773-4005-9061-0197322713c2" />
+
 
 ---
 
@@ -136,7 +132,8 @@ The optimal solution is stored in the last cell.
 ---
 
 ### Recorded Graph
-![img.png](img.png)
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/fc950d10-a3df-427e-b93a-ed2881ca4aeb" />
+
 
 ---
 
@@ -179,7 +176,8 @@ After all iterations, shortest paths between all pairs are obtained.
 ---
 
 ### Recorded Graph
-<!-- INSERT GRAPH IMAGE HERE -->
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/15a9e7c9-32e8-4e3e-9b89-bbfbca326321" />
+
 
 ---
 
@@ -224,6 +222,7 @@ Dynamic programming avoids recomputation, making it efficient compared to brute 
 ---
 
 ### Recorded Graph
-<!-- INSERT GRAPH IMAGE HERE -->
+<img width="789" height="490" alt="image" src="https://github.com/user-attachments/assets/8581fdbe-7a3f-4d0b-a059-016259d6734b" />
+
 
 ---
