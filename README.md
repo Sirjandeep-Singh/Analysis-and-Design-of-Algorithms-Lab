@@ -1607,9 +1607,5 @@ Dynamic programming avoids recomputation, making it efficient compared to brute 
 
 ---
 
-### Recorded Graph
-
-
----
 
 
