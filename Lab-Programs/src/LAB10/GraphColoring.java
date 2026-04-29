@@ -100,22 +100,36 @@ public class GraphColoring implements TwoDimAlgorithm {
 
     public static void main(String[] args){
         GraphColoring gc = new GraphColoring("GraphColoring");
+        int[][] graph = {
+                {0, 1, 1, 1},
+                {1, 0, 1, 0},
+                {1, 1, 0, 1},
+                {1, 0, 1, 0}
+        };
 
-        boolean[] choices = {false, true, false};
-        int length = 100;
+        int m = 3;
 
-        int[][] sizes = new int[length][2];
-        int idx = 0;
+        int[]res = gc.algorithm(graph, m);
 
-        for(int i = 4; idx < length; i++){
-            sizes[idx][0] = i;
-            sizes[idx][1] = i;
-            idx++;
+        for(int i = 0 ; i < res.length; i++){
+            System.out.println(i + "th Vertex : " + res[i] + "th Color");
         }
 
-        Timing2DAlgorithms framework =
-                new Timing2DAlgorithms(gc, 1000, "Lab-Programs/src/LAB10/Data/");
-
-        framework.initiate(sizes, choices);
+//        boolean[] choices = {false, true, false};
+//        int length = 100;
+//
+//        int[][] sizes = new int[length][2];
+//        int idx = 0;
+//
+//        for(int i = 4; idx < length; i++){
+//            sizes[idx][0] = i;
+//            sizes[idx][1] = i;
+//            idx++;
+//        }
+//
+//        Timing2DAlgorithms framework =
+//                new Timing2DAlgorithms(gc, 1000, "Lab-Programs/src/LAB10/Data/");
+//
+//        framework.initiate(sizes, choices);
     }
 }

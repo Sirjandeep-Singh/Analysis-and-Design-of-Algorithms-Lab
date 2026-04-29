@@ -146,6 +146,7 @@ The cost depends on the number of scalar multiplications required.
 ---
 
 ### Recorded Graph
+<img width="790" height="490" alt="image" src="https://github.com/user-attachments/assets/c2269ba0-1f48-478c-98f0-03ba06bb2cd5" />
 
 
 ---

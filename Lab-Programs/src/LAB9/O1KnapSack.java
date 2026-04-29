@@ -5,9 +5,21 @@ package LAB9;
 import LAB5.Timing2DAlgorithms;
 import LAB5.TwoDimAlgorithm;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class O1KnapSack implements TwoDimAlgorithm {
+
+    static class Pair {
+        int weight;
+        int profit;
+
+        Pair(int w, int p) {
+            this.weight = w;
+            this.profit = p;
+        }
+    }
+
     private String name;
     private int[][] memo;
     public O1KnapSack(String name){
@@ -58,6 +70,55 @@ public class O1KnapSack implements TwoDimAlgorithm {
             }
         }
         return result;
+    }
+
+    private int mergePurgeSolve(int[][] profitWeight_matrix, int maxWeight) {
+        ArrayList<Pair> list = new ArrayList<>();
+        list.add(new Pair(0, 0)); // initial solution
+
+        for (int i = 0; i < profitWeight_matrix.length; i++) {
+            int weight = profitWeight_matrix[i][1];
+            int profit = profitWeight_matrix[i][0];
+
+            ArrayList<Pair> newList = new ArrayList<>();
+
+            // include current item
+            for (Pair p : list) {
+                int newWeight = p.weight + weight;
+                int newProfit = p.profit + profit;
+
+                if (newWeight <= maxWeight) {
+                    newList.add(new Pair(newWeight, newProfit));
+                }
+            }
+
+            // merge
+            list.addAll(newList);
+
+            // sort by weight
+            list.sort((a, b) -> a.weight - b.weight);
+
+            // purge dominated pairs
+            ArrayList<Pair> filtered = new ArrayList<>();
+            int maxProfitSoFar = -1;
+
+            for (Pair p : list) {
+                if (p.profit > maxProfitSoFar) {
+                    filtered.add(p);
+                    maxProfitSoFar = p.profit;
+                }
+            }
+
+            list = filtered;
+        }
+
+        // get best profit
+        int maxProfit = 0;
+        for (Pair p : list) {
+            maxProfit = Math.max(maxProfit, p.profit);
+        }
+
+        return maxProfit;
     }
 
     @Override

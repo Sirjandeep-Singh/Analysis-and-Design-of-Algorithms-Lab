@@ -4,6 +4,8 @@ import LAB3.Algorithm;
 import LAB3.TimingAlgorithms;
 
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SubsetSum implements Algorithm {
 
@@ -20,30 +22,28 @@ public class SubsetSum implements Algorithm {
     }
 
     private boolean solve(int[] arr, int target){
-        return backtrack(arr, 0, 0, target);
+        List<Integer> cs = new ArrayList<>();
+        backtrack(arr, 0, 0, target, cs);
+        return true;
     }
 
-    private boolean backtrack(int[] arr, int index, int currentSum, int target){
+    public static void backtrack(int[] arr, int index, int currentSum, int target, List<Integer> currentSet) {
 
-        if(currentSum == target){
-            return true;
+        if (currentSum == target) {
+            System.out.println(currentSet);
+            return; // don't return true, continue searching for more
         }
 
-        if(index >= arr.length || currentSum > target){
-            return false;
+        if (index >= arr.length || currentSum > target) {
+            return;
         }
 
-        //Include current element
-        if(backtrack(arr, index + 1, currentSum + arr[index], target)){
-            return true;
-        }
+        currentSet.add(arr[index]);
+        backtrack(arr, index + 1, currentSum + arr[index], target, currentSet);
 
-        //Exclude current element
-        if(backtrack(arr, index + 1, currentSum, target)){
-            return true;
-        }
+        currentSet.remove(currentSet.size() - 1);
 
-        return false;
+        backtrack(arr, index + 1, currentSum, target, currentSet);
     }
 
     @Override
@@ -81,19 +81,23 @@ public class SubsetSum implements Algorithm {
 
         SubsetSum ss = new SubsetSum("SubsetSum");
 
-        int length = 100;
-        boolean[] choices = {false, false, true};
+        int[] set = {5, 10, 12, 13, 15, 18};
+        int target = 30;
+        ss.algorithm(set, target);
 
-        int[] sizes = new int[length];
-        int idx = 0;
-
-        for(int i = 5; i <= length * 5; i += 5){
-            sizes[idx] = i;
-            idx++;
-        }
-
-        TimingAlgorithms framework = new TimingAlgorithms(ss, 1000, "Lab-Programs/src/LAB10/Data/");
-
-        framework.initiate(sizes, choices);
+//        int length = 100;
+//        boolean[] choices = {false, false, true};
+//
+//        int[] sizes = new int[length];
+//        int idx = 0;
+//
+//        for(int i = 5; i <= length * 5; i += 5){
+//            sizes[idx] = i;
+//            idx++;
+//        }
+//
+//        TimingAlgorithms framework = new TimingAlgorithms(ss, 1000, "Lab-Programs/src/LAB10/Data/");
+//
+//        framework.initiate(sizes, choices);
     }
 }
